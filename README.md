@@ -49,13 +49,13 @@ Make sure you have the required permissions to clone and modify the repository. 
 
   * Select **Repository URL**
   * URL:
-    `https://github.com/DataTeam-AGH/Grant_Plesn_Frontend.git`
+    `https://github.com/DataTeam-AGH/Grant_orlen_android.git`
   * Choose your working directory
   * Ensure **Version Control = Git**
 * If connected to GitHub:
 
   * Select **GitHub**
-  * Search for `DataTeam-AGH/Grant_Plesn_Frontend`
+  * Search for `DataTeam-AGH/Grant_orlen_android`
   * Choose your working directory
 * Click **Clone** and wait for the project to load
 
@@ -74,7 +74,7 @@ Make sure you have the required permissions to clone and modify the repository. 
 * Run:
 
   ```bash
-  git clone https://github.com/DataTeam-AGH/Grant_Plesn_Frontend.git
+  git clone https://github.com/DataTeam-AGH/Grant_orlen_android.git
   ```
 
 Then open Android Studio:
@@ -83,7 +83,7 @@ Then open Android Studio:
 
 * Go to **Projects**
 * Click **Open**
-* Select the `GrantPlesnMobileApp` directory
+* Select the `Orlen_app` directory
 
 **If another project is open:**
 
@@ -174,7 +174,7 @@ We follow **Trunk-Based Development** (with minor modifications):
 ### Issues
 
 All tasks are tracked here:
-https://github.com/DataTeam-AGH/Grant_Plesn_Frontend/issues
+https://github.com/DataTeam-AGH/Grant_orlen_android/issues
 
 Each issue includes:
 
