@@ -49,13 +49,13 @@ Make sure you have the required permissions to clone and modify the repository. 
 
   * Select **Repository URL**
   * URL:
-    `https://github.com/DataTeam-AGH/Grant_orlen_android.git`
+    `https://github.com/DataTeam-AGH/Mobile_App_Orlen.git`
   * Choose your working directory
   * Ensure **Version Control = Git**
 * If connected to GitHub:
 
   * Select **GitHub**
-  * Search for `DataTeam-AGH/Grant_orlen_android`
+  * Search for `DataTeam-AGH/Mobile_App_Orlen`
   * Choose your working directory
 * Click **Clone** and wait for the project to load
 
@@ -74,7 +74,7 @@ Make sure you have the required permissions to clone and modify the repository. 
 * Run:
 
   ```bash
-  git clone https://github.com/DataTeam-AGH/Grant_orlen_android.git
+  git clone https://github.com/DataTeam-AGH/Mobile_App_Orlen.git
   ```
 
 Then open Android Studio:
