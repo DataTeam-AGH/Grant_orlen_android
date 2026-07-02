@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Mobile_App_Orlen</string>
+    <style name="Base.Theme.Mobile_App_Orlen" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.Mobile_App_Orlen" parent="Base.Theme.Mobile_App_Orlen"/>
+</resources>
