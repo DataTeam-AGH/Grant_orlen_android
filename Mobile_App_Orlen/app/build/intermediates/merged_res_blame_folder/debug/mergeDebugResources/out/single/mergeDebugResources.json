@@ -1,0 +1,98 @@
+[
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\drawable_bg_status_ok.xml.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\drawable\\bg_status_ok.xml"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\drawable_bg_button_secondary.xml.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\drawable\\bg_button_secondary.xml"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.mobile_app_orlen.app-debug-37:/layout_activity_main.xml.flat",
+        "source": "com.example.mobile_app_orlen.app-main-39:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\drawable_bg_button_primary.xml.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\drawable\\bg_button_primary.xml"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\mipmap-anydpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\drawable_bg_button_warning.xml.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\drawable\\bg_button_warning.xml"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\drawable_bg_header.xml.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\drawable\\bg_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\drawable_bg_card.xml.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\drawable\\bg_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\mipmap-anydpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-37:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\klaud\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-39:\\mipmap-mdpi\\ic_launcher.webp"
+    }
+]
