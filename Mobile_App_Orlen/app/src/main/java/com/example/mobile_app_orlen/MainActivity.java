@@ -1,13 +1,13 @@
 package com.example.mobile_app_orlen;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -72,22 +72,18 @@ public class MainActivity extends Activity {
         if (tvWeather != null) tvWeather.setText("Temperatura: 18°C  |  Wilgotność: 64%  |  Wiatr: 3.5 m/s");
     }
 
-    /**
-     * Aktualizuje tekst i kolor paska postępu w zależności od poziomu (ratio).
-     */
     private void updateGasDisplay(TextView textView, ProgressBar progressBar, String valueText, int progress, int max) {
         if (textView != null) textView.setText(valueText);
         if (progressBar != null) {
             progressBar.setMax(max);
             progressBar.setProgress(progress);
             
-            // Logika kolorów: zielony < 30%, żółty < 70%, czerwony >= 70%
             int color;
             float ratio = (float) progress / max;
             if (ratio < 0.3f) {
                 color = Color.parseColor("#4CAF50"); // Zielony
             } else if (ratio < 0.7f) {
-                color = Color.parseColor("#FFC107"); // Żółty/Pomarańczowy
+                color = Color.parseColor("#FFC107"); // Żółty
             } else {
                 color = Color.parseColor("#F44336"); // Czerwony
             }
@@ -97,27 +93,31 @@ public class MainActivity extends Activity {
 
     private void setupButtons() {
         if (btnNewMeasurement != null) {
-            btnNewMeasurement.setOnClickListener(v ->
-                    Toast.makeText(this, "Tu później zrobimy ekran dodawania pomiaru", Toast.LENGTH_SHORT).show()
-            );
+            btnNewMeasurement.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, AddMeasurementActivity.class);
+                startActivity(intent);
+            });
         }
 
         if (btnHistory != null) {
-            btnHistory.setOnClickListener(v ->
-                    Toast.makeText(this, "Tu później zrobimy historię pomiarów", Toast.LENGTH_SHORT).show()
-            );
+            btnHistory.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
+                startActivity(intent);
+            });
         }
 
         if (btnMap != null) {
-            btnMap.setOnClickListener(v ->
-                    Toast.makeText(this, "Tu później zrobimy mapę GPS / heatmapę", Toast.LENGTH_SHORT).show()
-            );
+            btnMap.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, MapActivity.class);
+                startActivity(intent);
+            });
         }
 
         if (btnAlerts != null) {
-            btnAlerts.setOnClickListener(v ->
-                    Toast.makeText(this, "Tu później zrobimy alarmy i procedury", Toast.LENGTH_SHORT).show()
-            );
+            btnAlerts.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, AlertsActivity.class);
+                startActivity(intent);
+            });
         }
     }
 }
