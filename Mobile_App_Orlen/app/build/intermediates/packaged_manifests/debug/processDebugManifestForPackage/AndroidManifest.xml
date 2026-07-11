@@ -8,6 +8,29 @@
         android:minSdkVersion="28"
         android:targetSdkVersion="36" />
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true" />
+
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+
     <permission
         android:name="com.example.mobile_app_orlen.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
@@ -27,6 +50,12 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Mobile_App_Orlen" >
+
+        <!-- Klucz API Map Google -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="MY_API_KEY" />
+
         <activity
             android:name="com.example.mobile_app_orlen.MainActivity"
             android:exported="true" >
@@ -36,6 +65,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.mobile_app_orlen.AddMeasurementActivity"
+            android:label="Dodaj pomiar" />
+        <activity
+            android:name="com.example.mobile_app_orlen.HistoryActivity"
+            android:label="Historia" />
+        <activity
+            android:name="com.example.mobile_app_orlen.MapActivity"
+            android:label="Mapa" />
+        <activity
+            android:name="com.example.mobile_app_orlen.AlertsActivity"
+            android:label="Alarmy" />
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

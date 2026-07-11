@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mobile_app_orlen.app-mergeDebugResources-35:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "com.example.mobile_app_orlen.app-mergeDebugResources-38:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\klaud\\.gradle\\caches\\9.3.1\\transforms\\2dfb410c40d5004ed648f9b97ae5cd7a\\workspace\\transformed\\material-1.14.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "source": "C:\\Users\\minhc\\.gradle\\caches\\9.3.1\\transforms\\718b272c939dac45a28628129d596b4b\\workspace\\transformed\\material-1.14.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
