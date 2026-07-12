@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mobile_app_orlen.app-mergeDebugResources-35:/values-xlarge-v4/values-xlarge-v4.xml",
+            "outputFile": "com.example.mobile_app_orlen.app-mergeDebugResources-38:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\klaud\\.gradle\\caches\\9.3.1\\transforms\\52746bc57ca25f1d2d58c334b5c5296d\\workspace\\transformed\\appcompat-1.7.1\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "source": "C:\\Users\\cypri\\.gradle\\caches\\9.3.1\\transforms\\1ce1641fda24a483d7bd41d0b0b0b431\\workspace\\transformed\\appcompat-1.7.1\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

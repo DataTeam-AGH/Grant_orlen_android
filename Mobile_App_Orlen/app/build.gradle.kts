@@ -37,6 +37,8 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.play.services.location)
+    implementation(libs.osmdroid)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
