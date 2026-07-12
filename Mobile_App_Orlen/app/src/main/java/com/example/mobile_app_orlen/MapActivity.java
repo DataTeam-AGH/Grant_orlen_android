@@ -37,7 +37,7 @@ public class MapActivity extends AppCompatActivity {
     private Marker userMarker = null;
 
     private TextView tvLatitude, tvLongitude, tvGpsStatus;
-    private Button btnRefreshLocation, btnBackToMenu;
+    private Button btnRefreshLocation, btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +54,7 @@ public class MapActivity extends AppCompatActivity {
         tvLongitude = findViewById(R.id.tvLongitude);
         tvGpsStatus = findViewById(R.id.tvGpsStatus);
         btnRefreshLocation = findViewById(R.id.btnRefreshLocation);
-        btnBackToMenu = findViewById(R.id.btnBackToMenu);
+        btnBack = findViewById(R.id.btnBack);
 
         // Inicjalizacja osmdroid MapView
         map = findViewById(R.id.map);
@@ -79,14 +79,14 @@ public class MapActivity extends AppCompatActivity {
             }
         });
 
-        btnBackToMenu.setOnClickListener(new View.OnClickListener() {
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
 
-        // Ustawienie domyślne na Kraków (skoro tam jesteś)
+        // Ustawienie domyślne na Kraków
         GeoPoint krakow = new GeoPoint(50.0647, 19.9450);
         map.getController().setCenter(krakow);
 
@@ -106,11 +106,11 @@ public class MapActivity extends AppCompatActivity {
 
     private void requestCurrentLocation() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            tvGpsStatus.setText("● Brak uprawnień");
+            tvGpsStatus.setText(getString(R.string.gps_no_permission));
             return;
         }
 
-        tvGpsStatus.setText("● GPS: Pobieranie lokalizacji...");
+        tvGpsStatus.setText(getString(R.string.gps_loading));
 
         CancellationTokenSource cts = new CancellationTokenSource();
         fusedLocationClient.getCurrentLocation(Priority.PRIORITY_HIGH_ACCURACY, cts.getToken())
@@ -119,12 +119,12 @@ public class MapActivity extends AppCompatActivity {
                         updateUiAndMap(location);
                         Toast.makeText(MapActivity.this, "Lokalizacja zaktualizowana", Toast.LENGTH_SHORT).show();
                     } else {
-                        tvGpsStatus.setText("● GPS: Brak danych");
+                        tvGpsStatus.setText(getString(R.string.gps_no_data));
                         Toast.makeText(MapActivity.this, "Upewnij się, że GPS jest włączony.", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .addOnFailureListener(this, e -> {
-                    tvGpsStatus.setText("● GPS: Błąd");
+                    tvGpsStatus.setText(getString(R.string.gps_error));
                 });
     }
 
@@ -135,7 +135,7 @@ public class MapActivity extends AppCompatActivity {
         // Współrzędne w stopniach
         tvLatitude.setText(convertToDms(lat, true));
         tvLongitude.setText(convertToDms(lng, false));
-        tvGpsStatus.setText("● GPS: Sygnał aktywny");
+        tvGpsStatus.setText(getString(R.string.gps_active));
 
         // Aktualizacja mapy
         GeoPoint userPoint = new GeoPoint(lat, lng);

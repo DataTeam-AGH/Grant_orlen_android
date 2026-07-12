@@ -12,8 +12,8 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
     // Widoki gazów
-    private TextView tvMethaneValue, tvH2SValue, tvCO2Value;
-    private ProgressBar progressMethane, progressH2S, progressCO2;
+    private TextView tvMethaneValue;
+    private ProgressBar progressMethane;
     
     // Status i KPI
     private TextView tvSystemStatus, tvMeasurementsCount, tvAnomalyCount, tvWeather;
@@ -35,12 +35,6 @@ public class MainActivity extends Activity {
         // Gazy
         tvMethaneValue = findViewById(R.id.tvMethaneValue);
         progressMethane = findViewById(R.id.progressMethane);
-        
-        tvH2SValue = findViewById(R.id.tvH2SValue);
-        progressH2S = findViewById(R.id.progressH2S);
-        
-        tvCO2Value = findViewById(R.id.tvCO2Value);
-        progressCO2 = findViewById(R.id.progressCO2);
 
         // Status i KPI
         tvSystemStatus = findViewById(R.id.tvSystemStatus);
@@ -58,12 +52,6 @@ public class MainActivity extends Activity {
     private void loadExampleData() {
         // Metan (CH4) - Niski poziom (Zielony)
         updateGasDisplay(tvMethaneValue, progressMethane, "0.5 %", 10, 100);
-
-        // Siarkowodór (H2S) - Średni poziom (Żółty)
-        updateGasDisplay(tvH2SValue, progressH2S, "15.0 ppm", 50, 100);
-
-        // Dwutlenek Węgla (CO2) - Wysoki poziom (Czerwony)
-        updateGasDisplay(tvCO2Value, progressCO2, "850 ppm", 850, 1000);
 
         // Status i KPI
         if (tvSystemStatus != null) tvSystemStatus.setText("● System aktywny");

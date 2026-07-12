@@ -1,3 +1,54 @@
 <resources>
     <string name="app_name">Mobile_App_Orlen</string>
+
+    <!-- Main Activity -->
+    <string name="main_title">MONITORING GAZÓW</string>
+    <string name="main_subtitle">System bezpieczeństwa i kontroli emisji</string>
+    <string name="status_connected">● SYSTEM AKTYWNY</string>
+    <string name="label_methane">Metan (CH₄)</string>
+    <string name="label_kpi">Wskaźniki KPI</string>
+    <string name="label_measurements">Pomiarów</string>
+    <string name="label_anomalies">Anomalie</string>
+    <string name="label_weather">Warunki atmosferyczne</string>
+    <string name="weather_placeholder">Temperatura: 18°C  |  Wilgotność: 64%  |  Wiatr: 3.5 m/s</string>
+    <string name="label_actions">Szybkie akcje</string>
+    <string name="btn_add_measurement">DODAJ POMIAR RĘCZNIE</string>
+    <string name="btn_history">HISTORIA POMIARÓW</string>
+    <string name="btn_map">MAPA GPS I HEATMAPA</string>
+    <string name="btn_alerts">ALARMY I PROCEDURY</string>
+    <string name="label_recent">Ostatnie pomiary</string>
+
+    <!-- Add Measurement -->
+    <string name="add_measurement_title">NOWY POMIAR</string>
+    <string name="add_measurement_subtitle">Ręczne wprowadzanie danych do systemu</string>
+    <string name="label_concentration">Stężenie gazu (%)</string>
+    <string name="hint_concentration">np. 0.5</string>
+    <string name="label_location">Lokalizacja / Sektor</string>
+    <string name="hint_location">np. PMG Wierzchowice</string>
+    <string name="btn_save">ZAPISZ W BAZIE</string>
+
+    <!-- History -->
+    <string name="history_title">HISTORIA</string>
+    <string name="history_subtitle">Przegląd archiwalnych zapisów</string>
+    <string name="history_empty">Brak archiwalnych pomiarów do wyświetlenia.</string>
+
+    <!-- Alerts -->
+    <string name="alerts_title">ALERTY</string>
+    <string name="alerts_subtitle">Aktywne ostrzeżenia i procedury</string>
+    <string name="alerts_placeholder">Obecnie nie odnotowano żadnych zagrożeń.</string>
+
+    <!-- Map -->
+    <string name="map_title">MAPA GPS I HEATMAPA</string>
+    <string name="map_refresh">ODŚWIEŻ LOKALIZACJĘ</string>
+    <string name="gps_searching">● GPS: Szukanie sygnału...</string>
+    <string name="gps_active">● GPS: Sygnał aktywny</string>
+    <string name="gps_error">● GPS: Błąd</string>
+    <string name="gps_no_data">● GPS: Brak danych</string>
+    <string name="gps_no_permission">● Brak uprawnień</string>
+    <string name="gps_loading">● GPS: Pobieranie lokalizacji...</string>
+    <string name="label_latitude">Szerokość (Lat)</string>
+    <string name="label_longitude">Długość (Lng)</string>
+    <string name="label_your_coords">Twoje współrzędne</string>
+
+    <string name="btn_back">POWRÓT</string>
 </resources>
