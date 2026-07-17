@@ -4020,6 +4020,8 @@ id add
 id adjust_height
 id adjust_width
 id advance
+id alarmHeader
+id alarmRoot
 id alertTitle
 id aligned
 id all
@@ -4052,8 +4054,10 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnAcknowledge
 id btnAlerts
 id btnBack
+id btnCall112
 id btnHistory
 id btnMap
 id btnNewMeasurement
@@ -4418,6 +4422,16 @@ id startVertical
 id start_center
 id staticLayout
 id staticPostLayout
+id stepCard1
+id stepCard2
+id stepCard3
+id stepCard4
+id stepCard5
+id stepNumber1
+id stepNumber2
+id stepNumber3
+id stepNumber4
+id stepNumber5
 id stop
 id stretch
 id submenuarrow
@@ -4475,8 +4489,10 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvAlarmDetails
 id tvAnomalyCount
 id tvAppName
+id tvEvacuateNow
 id tvGpsStatus
 id tvLastMeasurements
 id tvLatitude
@@ -4503,6 +4519,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id warningIcon
 id west
 id wide
 id withText
@@ -4638,6 +4655,7 @@ layout activity_alerts
 layout activity_history
 layout activity_main
 layout activity_map
+layout activity_safety_alarm
 layout bonuspack_bubble
 layout custom_dialog
 layout design_bottom_navigation_item
