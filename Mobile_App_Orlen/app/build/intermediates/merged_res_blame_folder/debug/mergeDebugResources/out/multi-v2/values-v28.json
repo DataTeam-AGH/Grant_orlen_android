@@ -4,26 +4,7 @@
             "outputFile": "com.example.mobile_app_orlen.app-mergeDebugResources-38:/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\zurek\\.gradle\\caches\\9.3.1\\transforms\\1ce1641fda24a483d7bd41d0b0b0b431\\workspace\\transformed\\appcompat-1.7.1\\res\\values-v28\\values-v28.xml",
-                    "from": {
-                        "startLines": "2,3,4,8",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,130,217,397",
-                        "endLines": "2,3,7,11",
-                        "endColumns": "74,86,12,12",
-                        "endOffsets": "125,212,392,584"
-                    },
-                    "to": {
-                        "startLines": "16,17,18,22",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "1344,1419,1506,1686",
-                        "endLines": "16,17,21,25",
-                        "endColumns": "74,86,12,12",
-                        "endOffsets": "1414,1501,1681,1873"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\zurek\\.gradle\\caches\\9.3.1\\transforms\\718b272c939dac45a28628129d596b4b\\workspace\\transformed\\material-1.14.0\\res\\values-v28\\values-v28.xml",
+                    "source": "C:\\Users\\cypri\\.gradle\\caches\\9.3.1\\transforms\\4f4c161da857059633bdd4b2e16581f5\\workspace\\transformed\\material-1.14.0\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -39,6 +20,25 @@
                         "endLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,29",
                         "endColumns": "103,98,97,95,94,96,87,87,87,87,86,86,86,86,10",
                         "endOffsets": "154,253,351,447,542,639,727,815,903,991,1078,1165,1252,1339,2160"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\cypri\\.gradle\\caches\\9.3.1\\transforms\\2f19bea2f2902ab493df06f1b32f5c01\\workspace\\transformed\\appcompat-1.7.1\\res\\values-v28\\values-v28.xml",
+                    "from": {
+                        "startLines": "2,3,4,8",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,397",
+                        "endLines": "2,3,7,11",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,392,584"
+                    },
+                    "to": {
+                        "startLines": "16,17,18,22",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "1344,1419,1506,1686",
+                        "endLines": "16,17,21,25",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "1414,1501,1681,1873"
                     }
                 }
             ]
