@@ -51,4 +51,15 @@
     <string name="label_your_coords">Twoje współrzędne</string>
 
     <string name="btn_back">POWRÓT</string>
+
+    <string name="add_manual_measurement">Add Manual Measurement</string>
+    <string name="manual_entry_title">Manual Measurement Entry</string>
+    <string name="co_concentration">CO Concentration (ppm)</string>
+    <string name="so2_concentration">SO2 Concentration (ppm)</string>
+    <string name="ch4_concentration">CH4 Concentration (%)</string>
+    <string name="error_invalid_value">Invalid value</string>
+    <string name="error_at_least_one_field">Proszę wpisać wartość stężenia CH4</string>
+    <string name="success_save">Measurements saved successfully</string>
+    <string name="save">Zapisz</string>
+    <string name="cancel">Anuluj</string>
 </resources>
