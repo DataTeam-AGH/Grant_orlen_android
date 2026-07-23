@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4F7FA"
@@ -20,6 +21,7 @@
             android:padding="20dp">
 
             <TextView
+                android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/add_measurement_title"
@@ -28,6 +30,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/tv_subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
@@ -36,7 +39,7 @@
                 android:textSize="14sp" />
         </LinearLayout>
 
-        <!-- Karta Formularza -->
+        <!-- Karta wprowadzania danych -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,57 +48,44 @@
             android:orientation="vertical"
             android:padding="18dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/label_concentration"
-                android:textColor="#263238"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/etConcentration"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_ch4"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:hint="@string/hint_concentration"
-                android:inputType="numberDecimal" />
+                android:hint="@string/ch4_concentration"
+                app:boxStrokeColor="#0B4F71"
+                app:hintTextColor="#0B4F71">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/label_location"
-                android:textColor="#263238"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_ch4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="#263238" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/etLocation"
+            <Button
+                android:id="@+id/btnSave"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:hint="@string/hint_location" />
+                android:layout_height="52dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_button_primary"
+                app:backgroundTint="@null"
+                android:text="@string/btn_save"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
         </LinearLayout>
-
-        <Button
-            android:id="@+id/btnSave"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/bg_button_primary"
-            android:text="@string/btn_save"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnBack"
             android:layout_width="match_parent"
             android:layout_height="52dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/bg_button_secondary"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_button_primary"
+            app:backgroundTint="@null"
             android:text="@string/btn_back"
-            android:textColor="#0B4F71"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
 
     </LinearLayout>

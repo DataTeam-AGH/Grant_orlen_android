@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-public class AddMeasurementActivity extends AppCompatActivity {
+public class ManualEntryActivity extends AppCompatActivity {
 
     private ManualEntryViewModel viewModel;
     private TextInputEditText etCh4;
@@ -17,21 +17,21 @@ public class AddMeasurementActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_measurement);
+        setContentView(R.layout.activity_manual_entry);
 
         viewModel = new ViewModelProvider(this).get(ManualEntryViewModel.class);
 
         etCh4 = findViewById(R.id.et_ch4);
 
-        Button btnSave = findViewById(R.id.btnSave);
-        Button btnBack = findViewById(R.id.btnBack);
+        Button btnSave = findViewById(R.id.btn_save);
+        Button btnCancel = findViewById(R.id.btn_cancel);
 
         btnSave.setOnClickListener(v -> {
             String ch4 = etCh4.getText() != null ? etCh4.getText().toString() : "";
             viewModel.saveMeasurements(ch4);
         });
 
-        btnBack.setOnClickListener(v -> finish());
+        btnCancel.setOnClickListener(v -> finish());
 
         viewModel.saveStatus.observe(this, status -> {
             if (status == null) return;
