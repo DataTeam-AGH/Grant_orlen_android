@@ -5,230 +5,234 @@
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
+7-->INJECTED
 8        android:minSdkVersion="28"
+8-->INJECTED
 9        android:targetSdkVersion="36" />
+9-->INJECTED
 10
 11    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-11-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:5:5-79
-11-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:5:22-76
+11-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:5:5-79
+11-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:5:22-76
 12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-12-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:6:5-81
-12-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:6:22-78
+12-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:6:5-81
+12-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:6:22-78
 13    <uses-permission android:name="android.permission.INTERNET" />
-13-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:7:5-67
-13-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:7:22-64
+13-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:7:5-67
+13-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:7:22-64
 14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-14-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:8:5-79
-14-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:8:22-76
+14-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:8:5-79
+14-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:8:22-76
 15    <uses-permission android:name="android.permission.VIBRATE" />
-15-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:9:5-66
-15-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:9:22-63
+15-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:9:5-66
+15-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:9:22-63
 16
 17    <supports-screens
-17-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cbc468ac6bebb0546edcf22a69772aa5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:9:5-12:40
+17-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:9:5-12:40
 18        android:anyDensity="true"
-18-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cbc468ac6bebb0546edcf22a69772aa5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:10:9-34
+18-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:10:9-34
 19        android:largeScreens="true"
-19-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cbc468ac6bebb0546edcf22a69772aa5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:11:9-36
+19-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:11:9-36
 20        android:normalScreens="true" />
-20-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cbc468ac6bebb0546edcf22a69772aa5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:12:9-37
+20-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:12:9-37
 21
 22    <uses-feature
-22-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cbc468ac6bebb0546edcf22a69772aa5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:14:5-16:36
+22-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:14:5-16:36
 23        android:name="android.hardware.location.network"
-23-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cbc468ac6bebb0546edcf22a69772aa5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:15:9-57
+23-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:15:9-57
 24        android:required="false" />
-24-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cbc468ac6bebb0546edcf22a69772aa5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:16:9-33
+24-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:16:9-33
 25    <uses-feature
-25-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cbc468ac6bebb0546edcf22a69772aa5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:17:5-19:36
+25-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:17:5-19:36
 26        android:name="android.hardware.location.gps"
-26-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cbc468ac6bebb0546edcf22a69772aa5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:18:9-53
+26-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:18:9-53
 27        android:required="false" />
-27-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cbc468ac6bebb0546edcf22a69772aa5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:19:9-33
+27-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:19:9-33
 28    <uses-feature
-28-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cbc468ac6bebb0546edcf22a69772aa5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:20:5-22:36
+28-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:20:5-22:36
 29        android:name="android.hardware.telephony"
-29-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cbc468ac6bebb0546edcf22a69772aa5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:21:9-50
+29-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:21:9-50
 30        android:required="false" />
-30-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cbc468ac6bebb0546edcf22a69772aa5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:22:9-33
+30-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:22:9-33
 31    <uses-feature
-31-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cbc468ac6bebb0546edcf22a69772aa5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:23:5-25:36
+31-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:23:5-25:36
 32        android:name="android.hardware.wifi"
-32-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cbc468ac6bebb0546edcf22a69772aa5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:24:9-45
+32-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:24:9-45
 33        android:required="false" />
-33-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cbc468ac6bebb0546edcf22a69772aa5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:25:9-33
+33-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:25:9-33
 34
 35    <permission
-35-->[androidx.core:core:1.18.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\614ebf0e8093c132f9e8f71b97b33bcf\workspace\transformed\core-1.18.0\AndroidManifest.xml:22:5-24:47
+35-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ebcf62ec3c1a0547de874c22d67ed7c4\workspace\transformed\core-1.18.0\AndroidManifest.xml:22:5-24:47
 36        android:name="com.example.mobile_app_orlen.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-36-->[androidx.core:core:1.18.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\614ebf0e8093c132f9e8f71b97b33bcf\workspace\transformed\core-1.18.0\AndroidManifest.xml:23:9-81
+36-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ebcf62ec3c1a0547de874c22d67ed7c4\workspace\transformed\core-1.18.0\AndroidManifest.xml:23:9-81
 37        android:protectionLevel="signature" />
-37-->[androidx.core:core:1.18.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\614ebf0e8093c132f9e8f71b97b33bcf\workspace\transformed\core-1.18.0\AndroidManifest.xml:24:9-44
+37-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ebcf62ec3c1a0547de874c22d67ed7c4\workspace\transformed\core-1.18.0\AndroidManifest.xml:24:9-44
 38
 39    <uses-permission android:name="com.example.mobile_app_orlen.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-39-->[androidx.core:core:1.18.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\614ebf0e8093c132f9e8f71b97b33bcf\workspace\transformed\core-1.18.0\AndroidManifest.xml:26:5-97
-39-->[androidx.core:core:1.18.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\614ebf0e8093c132f9e8f71b97b33bcf\workspace\transformed\core-1.18.0\AndroidManifest.xml:26:22-94
+39-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ebcf62ec3c1a0547de874c22d67ed7c4\workspace\transformed\core-1.18.0\AndroidManifest.xml:26:5-97
+39-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ebcf62ec3c1a0547de874c22d67ed7c4\workspace\transformed\core-1.18.0\AndroidManifest.xml:26:22-94
 40
 41    <application
-41-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:10:5-42:19
+41-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:10:5-42:19
 42        android:allowBackup="true"
-42-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:11:9-35
+42-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:11:9-35
 43        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-43-->[androidx.core:core:1.18.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\614ebf0e8093c132f9e8f71b97b33bcf\workspace\transformed\core-1.18.0\AndroidManifest.xml:28:18-86
+43-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ebcf62ec3c1a0547de874c22d67ed7c4\workspace\transformed\core-1.18.0\AndroidManifest.xml:28:18-86
 44        android:dataExtractionRules="@xml/data_extraction_rules"
-44-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:12:9-65
+44-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:12:9-65
 45        android:debuggable="true"
 46        android:extractNativeLibs="false"
+46-->INJECTED
 47        android:fullBackupContent="@xml/backup_rules"
-47-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:13:9-54
+47-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:13:9-54
 48        android:icon="@mipmap/ic_launcher"
-48-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:14:9-43
+48-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:14:9-43
 49        android:label="@string/app_name"
-49-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:15:9-41
+49-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:15:9-41
 50        android:roundIcon="@mipmap/ic_launcher_round"
-50-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:16:9-54
+50-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:16:9-54
 51        android:supportsRtl="true"
-51-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:17:9-35
+51-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:17:9-35
 52        android:testOnly="true"
 53        android:theme="@style/Theme.Mobile_App_Orlen" >
-53-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:18:9-54
+53-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:18:9-54
 54
 55        <!-- Klucz API Map Google -->
 56        <meta-data
-56-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:21:9-23:42
+56-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:21:9-23:42
 57            android:name="com.google.android.geo.API_KEY"
-57-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:22:13-58
+57-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:22:13-58
 58            android:value="MY_API_KEY" />
-58-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:23:13-39
+58-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:23:13-39
 59
 60        <activity
-60-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:25:9-32:20
+60-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:25:9-32:20
 61            android:name="com.example.mobile_app_orlen.MainActivity"
-61-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:26:13-41
+61-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:26:13-41
 62            android:exported="true" >
-62-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:27:13-36
+62-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:27:13-36
 63            <intent-filter>
-63-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:28:13-31:29
+63-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:28:13-31:29
 64                <action android:name="android.intent.action.MAIN" />
-64-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:29:17-69
-64-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:29:25-66
+64-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:29:17-69
+64-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:29:25-66
 65
 66                <category android:name="android.intent.category.LAUNCHER" />
-66-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:30:17-77
-66-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:30:27-74
+66-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:30:17-77
+66-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:30:27-74
 67            </intent-filter>
 68        </activity>
 69        <activity
-69-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:34:9-89
+69-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:34:9-89
 70            android:name="com.example.mobile_app_orlen.AddMeasurementActivity"
-70-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:34:19-57
+70-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:34:19-57
 71            android:label="Dodaj pomiar" />
-71-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:34:58-86
+71-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:34:58-86
 72        <activity
-72-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:35:9-78
+72-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:35:9-78
 73            android:name="com.example.mobile_app_orlen.HistoryActivity"
-73-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:35:19-50
+73-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:35:19-50
 74            android:label="Historia" />
-74-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:35:51-75
+74-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:35:51-75
 75        <activity
-75-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:36:9-70
+75-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:36:9-70
 76            android:name="com.example.mobile_app_orlen.MapActivity"
-76-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:36:19-46
+76-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:36:19-46
 77            android:label="Mapa" />
-77-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:36:47-67
+77-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:36:47-67
 78        <activity
-78-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:37:9-75
+78-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:37:9-75
 79            android:name="com.example.mobile_app_orlen.AlertsActivity"
-79-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:37:19-49
+79-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:37:19-49
 80            android:label="Alarmy" />
-80-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:37:50-72
+80-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:37:50-72
 81        <activity
-81-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:38:9-41:52
+81-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:38:9-41:52
 82            android:name="com.example.mobile_app_orlen.SafetyAlarmActivity"
-82-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:39:13-48
+82-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:39:13-48
 83            android:label="Alarm bezpieczeństwa"
-83-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:40:13-49
+83-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:40:13-49
 84            android:screenOrientation="portrait" />
-84-->C:\Users\zurek\Documents\AndroidProjects\Grant_orlen_android\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:41:13-49
+84-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:41:13-49
 85        <activity
-85-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\23b171cb9647e1997b73b087632ef260\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+85-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\f8474c63f48ed7dcf75163078abd09fc\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
 86            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-86-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\23b171cb9647e1997b73b087632ef260\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+86-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\f8474c63f48ed7dcf75163078abd09fc\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:19-85
 87            android:exported="false"
-87-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\23b171cb9647e1997b73b087632ef260\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+87-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\f8474c63f48ed7dcf75163078abd09fc\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:146-170
 88            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-88-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\23b171cb9647e1997b73b087632ef260\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+88-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\f8474c63f48ed7dcf75163078abd09fc\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:86-145
 89
 90        <meta-data
-90-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cd63a1af2baf21403184225f94f39c88\workspace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+90-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\1cce4ca46f1b05d4a8e9ea9576b9393e\workspace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
 91            android:name="com.google.android.gms.version"
-91-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cd63a1af2baf21403184225f94f39c88\workspace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+91-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\1cce4ca46f1b05d4a8e9ea9576b9393e\workspace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
 92            android:value="@integer/google_play_services_version" />
-92-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\cd63a1af2baf21403184225f94f39c88\workspace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+92-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\1cce4ca46f1b05d4a8e9ea9576b9393e\workspace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
 93
 94        <provider
-94-->[androidx.emoji2:emoji2:1.3.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\8cc312e562a003763aecc1b4e869a22a\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+94-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\575a716553294da72f8e19accd5ed500\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
 95            android:name="androidx.startup.InitializationProvider"
-95-->[androidx.emoji2:emoji2:1.3.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\8cc312e562a003763aecc1b4e869a22a\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+95-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\575a716553294da72f8e19accd5ed500\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
 96            android:authorities="com.example.mobile_app_orlen.androidx-startup"
-96-->[androidx.emoji2:emoji2:1.3.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\8cc312e562a003763aecc1b4e869a22a\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+96-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\575a716553294da72f8e19accd5ed500\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
 97            android:exported="false" >
-97-->[androidx.emoji2:emoji2:1.3.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\8cc312e562a003763aecc1b4e869a22a\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+97-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\575a716553294da72f8e19accd5ed500\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
 98            <meta-data
-98-->[androidx.emoji2:emoji2:1.3.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\8cc312e562a003763aecc1b4e869a22a\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+98-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\575a716553294da72f8e19accd5ed500\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
 99                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-99-->[androidx.emoji2:emoji2:1.3.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\8cc312e562a003763aecc1b4e869a22a\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+99-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\575a716553294da72f8e19accd5ed500\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
 100                android:value="androidx.startup" />
-100-->[androidx.emoji2:emoji2:1.3.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\8cc312e562a003763aecc1b4e869a22a\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+100-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\575a716553294da72f8e19accd5ed500\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
 101            <meta-data
-101-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\zurek\.gradle\caches\9.3.1\transforms\84f3ff079f36016dda7199a03111398e\workspace\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+101-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\cypri\.gradle\caches\9.3.1\transforms\f01068671405af74bc035806ffcd6c40\workspace\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
 102                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-102-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\zurek\.gradle\caches\9.3.1\transforms\84f3ff079f36016dda7199a03111398e\workspace\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+102-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\cypri\.gradle\caches\9.3.1\transforms\f01068671405af74bc035806ffcd6c40\workspace\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
 103                android:value="androidx.startup" />
-103-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\zurek\.gradle\caches\9.3.1\transforms\84f3ff079f36016dda7199a03111398e\workspace\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+103-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\cypri\.gradle\caches\9.3.1\transforms\f01068671405af74bc035806ffcd6c40\workspace\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
 104            <meta-data
-104-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+104-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
 105                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-105-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+105-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
 106                android:value="androidx.startup" />
-106-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+106-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
 107        </provider>
 108
 109        <receiver
-109-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+109-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
 110            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-110-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+110-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
 111            android:directBootAware="false"
-111-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+111-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
 112            android:enabled="true"
-112-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+112-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
 113            android:exported="true"
-113-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+113-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
 114            android:permission="android.permission.DUMP" >
-114-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+114-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
 115            <intent-filter>
-115-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+115-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
 116                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-116-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
-116-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+116-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+116-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
 117            </intent-filter>
 118            <intent-filter>
-118-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+118-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
 119                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-119-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
-119-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+119-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+119-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
 120            </intent-filter>
 121            <intent-filter>
-121-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+121-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
 122                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-122-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
-122-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+122-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+122-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
 123            </intent-filter>
 124            <intent-filter>
-124-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+124-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
 125                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-125-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
-125-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\zurek\.gradle\caches\9.3.1\transforms\0b66d0adc4ca1118a5026bd215d04876\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+125-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+125-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
 126            </intent-filter>
 127        </receiver>
 128    </application>

@@ -9,6 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.location.LocationManager;
+import android.content.Context;
+
+import com.google.android.gms.location.CurrentLocationRequest;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +20,9 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.Priority;
 import com.google.android.gms.tasks.CancellationTokenSource;
@@ -27,25 +34,35 @@ import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.Marker;
 import org.osmdroid.views.overlay.ScaleBarOverlay;
 
+import java.io.File;
 import java.util.Locale;
 
 public class MapActivity extends AppCompatActivity {
 
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1001;
     private FusedLocationProviderClient fusedLocationClient;
+    private LocationCallback locationCallback;
     private MapView map = null;
-    private Marker userMarker = null;
+    private Marker userMarker = null; 
+    private boolean isFirstFix = true;
 
     private TextView tvLatitude, tvLongitude, tvGpsStatus;
     private Button btnRefreshLocation, btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // NAPRAWA BŁĘDU 403 - Musi być na samym początku przed super.onCreate
+        Configuration.getInstance().setUserAgentValue("OrlenMonitoring_" + getPackageName() + "_" + System.currentTimeMillis());
+        
         super.onCreate(savedInstanceState);
 
-        // Konfiguracja osmdroid - ważne przed setContentView
-        Configuration.getInstance().load(this, PreferenceManager.getDefaultSharedPreferences(this));
-        Configuration.getInstance().setUserAgentValue(getPackageName());
+        Context ctx = getApplicationContext();
+        Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
+        
+        // Używamy nowej ścieżki cache, żeby ominąć zablokowane kafelki
+        File osmdroidCache = new File(getCacheDir(), "osmdroid_tiles_new_v3");
+        if (!osmdroidCache.exists()) osmdroidCache.mkdirs();
+        Configuration.getInstance().setOsmdroidTileCache(osmdroidCache);
 
         setContentView(R.layout.activity_map);
 
@@ -61,7 +78,7 @@ public class MapActivity extends AppCompatActivity {
         map.setTileSource(TileSourceFactory.MAPNIK);
         map.setMultiTouchControls(true);
         map.getController().setZoom(15.0);
-        
+
         // Dodanie paska skali
         ScaleBarOverlay scaleBarOverlay = new ScaleBarOverlay(map);
         scaleBarOverlay.setCentred(true);
@@ -71,10 +88,23 @@ public class MapActivity extends AppCompatActivity {
         // Inicjalizacja klienta lokalizacji Google
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
+        // Definicja ciągłego śledzenia pozycji
+        locationCallback = new LocationCallback() {
+            @Override
+            public void onLocationResult(@NonNull LocationResult locationResult) {
+                for (Location location : locationResult.getLocations()) {
+                    if (location != null) {
+                        updateUiAndMap(location);
+                    }
+                }
+            }
+        };
+
         // Obsługa przycisków
         btnRefreshLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                isFirstFix = true;
                 checkLocationPermissionAndGetLocation();
             }
         });
@@ -110,57 +140,84 @@ public class MapActivity extends AppCompatActivity {
             return;
         }
 
+        // Sprawdź czy GPS jest w ogóle włączony w systemie
+        LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        if (!lm.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            Toast.makeText(this, "Włącz GPS w ustawieniach emulatora/telefonu!", Toast.LENGTH_LONG).show();
+        }
+
         tvGpsStatus.setText(getString(R.string.gps_loading));
 
+        // 1. Spróbuj pobrać ostatnią znaną pozycję (szybki start)
+        fusedLocationClient.getLastLocation().addOnSuccessListener(this, location -> {
+            if (location != null) {
+                updateUiAndMap(location);
+            }
+        });
+
+        // 2. Wymuś pobranie świeżej lokalizacji (CurrentLocation)
         CancellationTokenSource cts = new CancellationTokenSource();
-        fusedLocationClient.getCurrentLocation(Priority.PRIORITY_HIGH_ACCURACY, cts.getToken())
-                .addOnSuccessListener(this, location -> {
-                    if (location != null) {
-                        updateUiAndMap(location);
-                        Toast.makeText(MapActivity.this, "Lokalizacja zaktualizowana", Toast.LENGTH_SHORT).show();
-                    } else {
-                        tvGpsStatus.setText(getString(R.string.gps_no_data));
-                        Toast.makeText(MapActivity.this, "Upewnij się, że GPS jest włączony.", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .addOnFailureListener(this, e -> {
-                    tvGpsStatus.setText(getString(R.string.gps_error));
-                });
+        CurrentLocationRequest clr = new CurrentLocationRequest.Builder()
+                .setPriority(Priority.PRIORITY_HIGH_ACCURACY)
+                .build();
+
+        fusedLocationClient.getCurrentLocation(clr, cts.getToken()).addOnSuccessListener(this, location -> {
+            if (location != null) {
+                updateUiAndMap(location);
+            } else {
+                Toast.makeText(this, "GPS: Ustaw lokalizację w Extended Controls emulatora!", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        // 3. Rozpocznij ciągłe śledzenie
+        LocationRequest locationRequest = new LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, 5000)
+                .setMinUpdateIntervalMillis(2000)
+                .build();
+
+        fusedLocationClient.requestLocationUpdates(locationRequest, locationCallback, getMainLooper());
     }
 
     private void updateUiAndMap(Location location) {
+        if (location == null) return;
+        
         double lat = location.getLatitude();
         double lng = location.getLongitude();
+        GeoPoint userPoint = new GeoPoint(lat, lng);
 
-        // Współrzędne w stopniach
+        // SYNCHRONIZACJA: Ten sam sygnał dla tekstu i markera
         tvLatitude.setText(convertToDms(lat, true));
         tvLongitude.setText(convertToDms(lng, false));
         tvGpsStatus.setText(getString(R.string.gps_active));
 
-        // Aktualizacja mapy
-        GeoPoint userPoint = new GeoPoint(lat, lng);
-        map.getController().animateTo(userPoint);
-        
-        if (userMarker != null) {
-            map.getOverlays().remove(userMarker);
+        // Ręczny marker - 100% synchronizacji
+        if (userMarker == null) {
+            userMarker = new Marker(map);
+            userMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_CENTER);
+            
+            // Profesjonalna kropka Orlen (Niebieska)
+            android.graphics.drawable.GradientDrawable dot = new android.graphics.drawable.GradientDrawable();
+            dot.setShape(android.graphics.drawable.GradientDrawable.OVAL);
+            dot.setColor(android.graphics.Color.parseColor("#0D47A1")); 
+            dot.setSize(60, 60);
+            dot.setStroke(5, android.graphics.Color.WHITE);
+            
+            userMarker.setIcon(dot);
+            userMarker.setInfoWindow(null);
+            map.getOverlays().add(userMarker);
+            
+            // Tylko przy pierwszym złapaniu sygnału centrujemy mapę
+            map.getController().setCenter(userPoint);
+            map.getController().setZoom(18.0);
         }
         
-        userMarker = new Marker(map);
         userMarker.setPosition(userPoint);
-        
-        // Prosta czerwona ikonka (kropka)
-        android.graphics.drawable.GradientDrawable dot = new android.graphics.drawable.GradientDrawable();
-        dot.setShape(android.graphics.drawable.GradientDrawable.OVAL);
-        dot.setColor(android.graphics.Color.RED);
-        dot.setSize(45, 45);
-        dot.setStroke(3, android.graphics.Color.WHITE); // Biała obwódka dla lepszej widoczności
-        
-        userMarker.setIcon(dot);
-        userMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_CENTER);
-        userMarker.setInfoWindow(null); // Wyłączenie dymka z tekstem
 
-        map.getOverlays().add(userMarker);
-        map.invalidate(); // Odśwież mapę
+        if (isFirstFix) {
+            map.getController().animateTo(userPoint);
+            isFirstFix = false;
+        }
+        
+        map.invalidate(); 
     }
 
     private String convertToDms(double coordinate, boolean isLatitude) {
@@ -177,12 +234,17 @@ public class MapActivity extends AppCompatActivity {
     public void onResume() {
         super.onResume();
         if (map != null) map.onResume();
+        checkLocationPermissionAndGetLocation();
     }
 
     @Override
     public void onPause() {
         super.onPause();
         if (map != null) map.onPause();
+        // Zatrzymaj śledzenie, gdy apka jest w tle
+        if (fusedLocationClient != null) {
+            fusedLocationClient.removeLocationUpdates(locationCallback);
+        }
     }
 
     @Override
