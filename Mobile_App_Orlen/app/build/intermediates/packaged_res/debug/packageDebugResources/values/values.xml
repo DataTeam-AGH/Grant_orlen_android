@@ -4,6 +4,9 @@
     <color name="white">#FFFFFFFF</color>
     <string name="add_measurement_subtitle">Ręczne wprowadzanie danych do systemu</string>
     <string name="add_measurement_title">NOWY POMIAR</string>
+    <string name="alarm_location_fetching">Twoja lokalizacja: Pobieranie...</string>
+    <string name="alarm_location_format">Twoja lokalizacja:\n%1$s, %2$s</string>
+    <string name="alarm_location_no_permission">Brak uprawnień do lokalizacji</string>
     <string name="alerts_placeholder">Obecnie nie odnotowano żadnych zagrożeń.</string>
     <string name="alerts_subtitle">Aktywne ostrzeżenia i procedury</string>
     <string name="alerts_title">ALERTY</string>
@@ -42,7 +45,9 @@
     <string name="map_refresh">ODŚWIEŻ LOKALIZACJĘ</string>
     <string name="map_title">MAPA GPS I HEATMAPA</string>
     <string name="status_connected">● SYSTEM AKTYWNY</string>
-    <string name="weather_placeholder">Temperatura: 18°C  |  Wilgotność: 64%  |  Wiatr: 3.5 m/s</string>
+    <string name="weather_error">Błąd pobierania pogody</string>
+    <string name="weather_loading">Pobieranie danych pogodowych...</string>
+    <string name="weather_no_location">Brak lokalizacji dla pogody</string>
     <style name="Base.Theme.Mobile_App_Orlen" parent="Theme.Material3.DayNight.NoActionBar">
         
         

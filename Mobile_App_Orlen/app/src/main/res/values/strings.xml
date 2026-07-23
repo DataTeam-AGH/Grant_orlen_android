@@ -10,7 +10,9 @@
     <string name="label_measurements">Pomiarów</string>
     <string name="label_anomalies">Anomalie</string>
     <string name="label_weather">Warunki atmosferyczne</string>
-    <string name="weather_placeholder">Temperatura: 18°C  |  Wilgotność: 64%  |  Wiatr: 3.5 m/s</string>
+    <string name="weather_loading">Pobieranie danych pogodowych...</string>
+    <string name="weather_error">Błąd pobierania pogody</string>
+    <string name="weather_no_location">Brak lokalizacji dla pogody</string>
     <string name="label_actions">Szybkie akcje</string>
     <string name="btn_add_measurement">DODAJ POMIAR RĘCZNIE</string>
     <string name="btn_history">HISTORIA POMIARÓW</string>
