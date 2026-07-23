@@ -66,7 +66,6 @@ public class MainActivity extends Activity {
         connectViews();
         loadExampleData();
         setupButtons();
-        checkSafetyAlarm();
         fetchLocationAndWeather();
     }
 

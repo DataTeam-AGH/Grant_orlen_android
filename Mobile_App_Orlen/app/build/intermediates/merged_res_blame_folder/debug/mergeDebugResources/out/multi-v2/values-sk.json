@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mobile_app_orlen.app-mergeDebugResources-38:/values-sk/values-sk.xml",
+            "outputFile": "com.example.mobile_app_orlen.app-mergeDebugResources-41:/values-sk/values-sk.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\cypri\\.gradle\\caches\\9.3.1\\transforms\\1cce4ca46f1b05d4a8e9ea9576b9393e\\workspace\\transformed\\play-services-basement-18.4.0\\res\\values-sk\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "134",
-                        "endOffsets": "329"
-                    },
-                    "to": {
-                        "startLines": "63",
-                        "startColumns": "4",
-                        "startOffsets": "5953",
-                        "endColumns": "138",
-                        "endOffsets": "6087"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\cypri\\.gradle\\caches\\9.3.1\\transforms\\4f4c161da857059633bdd4b2e16581f5\\workspace\\transformed\\material-1.14.0\\res\\values-sk\\values-sk.xml",
+                    "source": "C:\\Users\\cypri\\.gradle\\caches\\9.3.1\\transforms\\f182ccdd7b7d52801880a0d603da831e\\workspace\\transformed\\material-1.14.0\\res\\values-sk\\values-sk.xml",
                     "from": {
                         "startLines": "2,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -40,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\cypri\\.gradle\\caches\\9.3.1\\transforms\\2f19bea2f2902ab493df06f1b32f5c01\\workspace\\transformed\\appcompat-1.7.1\\res\\values-sk\\values-sk.xml",
+                    "source": "C:\\Users\\cypri\\.gradle\\caches\\9.3.1\\transforms\\f4d12dd1db749408b991b82798fff159\\workspace\\transformed\\appcompat-1.7.1\\res\\values-sk\\values-sk.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -57,24 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\cypri\\.gradle\\caches\\9.3.1\\transforms\\f8474c63f48ed7dcf75163078abd09fc\\workspace\\transformed\\play-services-base-18.5.0\\res\\values-sk\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "193,295,451,571,677,829,953,1062,1160,1325,1432,1598,1724,1883,2043,2107,2170",
-                        "endColumns": "101,155,119,105,151,123,108,97,164,106,165,125,158,159,63,62,82",
-                        "endOffsets": "294,450,570,676,828,952,1061,1159,1324,1431,1597,1723,1882,2042,2106,2169,2252"
-                    },
-                    "to": {
-                        "startLines": "55,56,57,58,59,60,61,62,64,65,66,67,68,69,70,71,72",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4954,5060,5220,5344,5454,5610,5738,5851,6092,6261,6372,6542,6672,6835,6999,7067,7134",
-                        "endColumns": "105,159,123,109,155,127,112,101,168,110,169,129,162,163,67,66,86",
-                        "endOffsets": "5055,5215,5339,5449,5605,5733,5846,5948,6256,6367,6537,6667,6830,6994,7062,7129,7216"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\cypri\\.gradle\\caches\\9.3.1\\transforms\\ebcf62ec3c1a0547de874c22d67ed7c4\\workspace\\transformed\\core-1.18.0\\res\\values-sk\\values-sk.xml",
+                    "source": "C:\\Users\\cypri\\.gradle\\caches\\9.3.1\\transforms\\7245295bbfde9365fbc33a9d62c195f9\\workspace\\transformed\\core-1.18.0\\res\\values-sk\\values-sk.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -88,6 +54,40 @@
                         "startOffsets": "3916,4012,4114,4215,4313,4423,4531,14332",
                         "endColumns": "95,101,100,97,109,107,121,100",
                         "endOffsets": "4007,4109,4210,4308,4418,4526,4648,14428"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\cypri\\.gradle\\caches\\9.3.1\\transforms\\1d41124e4f7f856c4e927d010fa03df5\\workspace\\transformed\\play-services-basement-18.4.0\\res\\values-sk\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "134",
+                        "endOffsets": "329"
+                    },
+                    "to": {
+                        "startLines": "63",
+                        "startColumns": "4",
+                        "startOffsets": "5953",
+                        "endColumns": "138",
+                        "endOffsets": "6087"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\cypri\\.gradle\\caches\\9.3.1\\transforms\\cd4a5bddb4e9915eba5b3cbabf072862\\workspace\\transformed\\play-services-base-18.5.0\\res\\values-sk\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,295,451,571,677,829,953,1062,1160,1325,1432,1598,1724,1883,2043,2107,2170",
+                        "endColumns": "101,155,119,105,151,123,108,97,164,106,165,125,158,159,63,62,82",
+                        "endOffsets": "294,450,570,676,828,952,1061,1159,1324,1431,1597,1723,1882,2042,2106,2169,2252"
+                    },
+                    "to": {
+                        "startLines": "55,56,57,58,59,60,61,62,64,65,66,67,68,69,70,71,72",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4954,5060,5220,5344,5454,5610,5738,5851,6092,6261,6372,6542,6672,6835,6999,7067,7134",
+                        "endColumns": "105,159,123,109,155,127,112,101,168,110,169,129,162,163,67,66,86",
+                        "endOffsets": "5055,5215,5339,5449,5605,5733,5846,5948,6256,6367,6537,6667,6830,6994,7062,7129,7216"
                     }
                 }
             ]

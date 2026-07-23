@@ -28,56 +28,56 @@
 15-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:9:22-63
 16
 17    <supports-screens
-17-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:9:5-12:40
+17-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\51124dfa92d210973b04a397629e93a5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:9:5-12:40
 18        android:anyDensity="true"
-18-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:10:9-34
+18-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\51124dfa92d210973b04a397629e93a5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:10:9-34
 19        android:largeScreens="true"
-19-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:11:9-36
+19-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\51124dfa92d210973b04a397629e93a5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:11:9-36
 20        android:normalScreens="true" />
-20-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:12:9-37
+20-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\51124dfa92d210973b04a397629e93a5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:12:9-37
 21
 22    <uses-feature
-22-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:14:5-16:36
+22-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\51124dfa92d210973b04a397629e93a5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:14:5-16:36
 23        android:name="android.hardware.location.network"
-23-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:15:9-57
+23-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\51124dfa92d210973b04a397629e93a5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:15:9-57
 24        android:required="false" />
-24-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:16:9-33
+24-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\51124dfa92d210973b04a397629e93a5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:16:9-33
 25    <uses-feature
-25-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:17:5-19:36
+25-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\51124dfa92d210973b04a397629e93a5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:17:5-19:36
 26        android:name="android.hardware.location.gps"
-26-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:18:9-53
+26-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\51124dfa92d210973b04a397629e93a5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:18:9-53
 27        android:required="false" />
-27-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:19:9-33
+27-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\51124dfa92d210973b04a397629e93a5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:19:9-33
 28    <uses-feature
-28-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:20:5-22:36
+28-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\51124dfa92d210973b04a397629e93a5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:20:5-22:36
 29        android:name="android.hardware.telephony"
-29-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:21:9-50
+29-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\51124dfa92d210973b04a397629e93a5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:21:9-50
 30        android:required="false" />
-30-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:22:9-33
+30-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\51124dfa92d210973b04a397629e93a5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:22:9-33
 31    <uses-feature
-31-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:23:5-25:36
+31-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\51124dfa92d210973b04a397629e93a5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:23:5-25:36
 32        android:name="android.hardware.wifi"
-32-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:24:9-45
+32-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\51124dfa92d210973b04a397629e93a5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:24:9-45
 33        android:required="false" />
-33-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7451c6bbcb64bc4cdfb2d59fb4269ae3\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:25:9-33
+33-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\51124dfa92d210973b04a397629e93a5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:25:9-33
 34
 35    <permission
-35-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ebcf62ec3c1a0547de874c22d67ed7c4\workspace\transformed\core-1.18.0\AndroidManifest.xml:22:5-24:47
+35-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7245295bbfde9365fbc33a9d62c195f9\workspace\transformed\core-1.18.0\AndroidManifest.xml:22:5-24:47
 36        android:name="com.example.mobile_app_orlen.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-36-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ebcf62ec3c1a0547de874c22d67ed7c4\workspace\transformed\core-1.18.0\AndroidManifest.xml:23:9-81
+36-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7245295bbfde9365fbc33a9d62c195f9\workspace\transformed\core-1.18.0\AndroidManifest.xml:23:9-81
 37        android:protectionLevel="signature" />
-37-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ebcf62ec3c1a0547de874c22d67ed7c4\workspace\transformed\core-1.18.0\AndroidManifest.xml:24:9-44
+37-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7245295bbfde9365fbc33a9d62c195f9\workspace\transformed\core-1.18.0\AndroidManifest.xml:24:9-44
 38
 39    <uses-permission android:name="com.example.mobile_app_orlen.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-39-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ebcf62ec3c1a0547de874c22d67ed7c4\workspace\transformed\core-1.18.0\AndroidManifest.xml:26:5-97
-39-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ebcf62ec3c1a0547de874c22d67ed7c4\workspace\transformed\core-1.18.0\AndroidManifest.xml:26:22-94
+39-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7245295bbfde9365fbc33a9d62c195f9\workspace\transformed\core-1.18.0\AndroidManifest.xml:26:5-97
+39-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7245295bbfde9365fbc33a9d62c195f9\workspace\transformed\core-1.18.0\AndroidManifest.xml:26:22-94
 40
 41    <application
 41-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:10:5-42:19
 42        android:allowBackup="true"
 42-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:11:9-35
 43        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-43-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ebcf62ec3c1a0547de874c22d67ed7c4\workspace\transformed\core-1.18.0\AndroidManifest.xml:28:18-86
+43-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7245295bbfde9365fbc33a9d62c195f9\workspace\transformed\core-1.18.0\AndroidManifest.xml:28:18-86
 44        android:dataExtractionRules="@xml/data_extraction_rules"
 44-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:12:9-65
 45        android:debuggable="true"
@@ -155,86 +155,95 @@
 84            android:screenOrientation="portrait" />
 84-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:41:13-49
 85        <activity
-85-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\f8474c63f48ed7dcf75163078abd09fc\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+85-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\cd4a5bddb4e9915eba5b3cbabf072862\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
 86            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-86-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\f8474c63f48ed7dcf75163078abd09fc\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+86-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\cd4a5bddb4e9915eba5b3cbabf072862\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:19-85
 87            android:exported="false"
-87-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\f8474c63f48ed7dcf75163078abd09fc\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+87-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\cd4a5bddb4e9915eba5b3cbabf072862\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:146-170
 88            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-88-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\f8474c63f48ed7dcf75163078abd09fc\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+88-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\cd4a5bddb4e9915eba5b3cbabf072862\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:86-145
 89
 90        <meta-data
-90-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\1cce4ca46f1b05d4a8e9ea9576b9393e\workspace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+90-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\1d41124e4f7f856c4e927d010fa03df5\workspace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
 91            android:name="com.google.android.gms.version"
-91-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\1cce4ca46f1b05d4a8e9ea9576b9393e\workspace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+91-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\1d41124e4f7f856c4e927d010fa03df5\workspace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
 92            android:value="@integer/google_play_services_version" />
-92-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\1cce4ca46f1b05d4a8e9ea9576b9393e\workspace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+92-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\1d41124e4f7f856c4e927d010fa03df5\workspace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
 93
-94        <provider
-94-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\575a716553294da72f8e19accd5ed500\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-95            android:name="androidx.startup.InitializationProvider"
-95-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\575a716553294da72f8e19accd5ed500\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
-96            android:authorities="com.example.mobile_app_orlen.androidx-startup"
-96-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\575a716553294da72f8e19accd5ed500\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
-97            android:exported="false" >
-97-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\575a716553294da72f8e19accd5ed500\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
-98            <meta-data
-98-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\575a716553294da72f8e19accd5ed500\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
-99                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-99-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\575a716553294da72f8e19accd5ed500\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
-100                android:value="androidx.startup" />
-100-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\575a716553294da72f8e19accd5ed500\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
-101            <meta-data
-101-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\cypri\.gradle\caches\9.3.1\transforms\f01068671405af74bc035806ffcd6c40\workspace\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-102                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-102-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\cypri\.gradle\caches\9.3.1\transforms\f01068671405af74bc035806ffcd6c40\workspace\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
-103                android:value="androidx.startup" />
-103-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\cypri\.gradle\caches\9.3.1\transforms\f01068671405af74bc035806ffcd6c40\workspace\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
-104            <meta-data
-104-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
-105                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-105-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
-106                android:value="androidx.startup" />
-106-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
-107        </provider>
-108
-109        <receiver
-109-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
-110            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-110-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
-111            android:directBootAware="false"
-111-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
-112            android:enabled="true"
-112-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
-113            android:exported="true"
-113-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
-114            android:permission="android.permission.DUMP" >
-114-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
-115            <intent-filter>
-115-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
-116                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-116-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
-116-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
-117            </intent-filter>
-118            <intent-filter>
-118-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
-119                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-119-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
-119-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
-120            </intent-filter>
-121            <intent-filter>
-121-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
-122                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-122-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
-122-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
-123            </intent-filter>
-124            <intent-filter>
-124-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
-125                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-125-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
-125-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\a79ef6d8240e2c3061bbfb94b828b1c2\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
-126            </intent-filter>
-127        </receiver>
-128    </application>
-129
-130</manifest>
+94        <service
+94-->[androidx.room:room-runtime:2.6.1] C:\Users\cypri\.gradle\caches\9.3.1\transforms\dbc296647fa784c28a4d1dc5405fa2c3\workspace\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+95            android:name="androidx.room.MultiInstanceInvalidationService"
+95-->[androidx.room:room-runtime:2.6.1] C:\Users\cypri\.gradle\caches\9.3.1\transforms\dbc296647fa784c28a4d1dc5405fa2c3\workspace\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+96            android:directBootAware="true"
+96-->[androidx.room:room-runtime:2.6.1] C:\Users\cypri\.gradle\caches\9.3.1\transforms\dbc296647fa784c28a4d1dc5405fa2c3\workspace\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+97            android:exported="false" />
+97-->[androidx.room:room-runtime:2.6.1] C:\Users\cypri\.gradle\caches\9.3.1\transforms\dbc296647fa784c28a4d1dc5405fa2c3\workspace\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+98
+99        <provider
+99-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ea2d740d39cbe8136d98b9d2fa77659a\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+100            android:name="androidx.startup.InitializationProvider"
+100-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ea2d740d39cbe8136d98b9d2fa77659a\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+101            android:authorities="com.example.mobile_app_orlen.androidx-startup"
+101-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ea2d740d39cbe8136d98b9d2fa77659a\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+102            android:exported="false" >
+102-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ea2d740d39cbe8136d98b9d2fa77659a\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+103            <meta-data
+103-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ea2d740d39cbe8136d98b9d2fa77659a\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+104                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+104-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ea2d740d39cbe8136d98b9d2fa77659a\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+105                android:value="androidx.startup" />
+105-->[androidx.emoji2:emoji2:1.3.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\ea2d740d39cbe8136d98b9d2fa77659a\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+106            <meta-data
+106-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\cypri\.gradle\caches\9.3.1\transforms\193f8cd533ca96b41ddbcbf7aca9226b\workspace\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+107                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+107-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\cypri\.gradle\caches\9.3.1\transforms\193f8cd533ca96b41ddbcbf7aca9226b\workspace\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+108                android:value="androidx.startup" />
+108-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\cypri\.gradle\caches\9.3.1\transforms\193f8cd533ca96b41ddbcbf7aca9226b\workspace\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+109            <meta-data
+109-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+110                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+110-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+111                android:value="androidx.startup" />
+111-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+112        </provider>
+113
+114        <receiver
+114-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+115            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+115-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+116            android:directBootAware="false"
+116-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+117            android:enabled="true"
+117-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+118            android:exported="true"
+118-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+119            android:permission="android.permission.DUMP" >
+119-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+120            <intent-filter>
+120-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+121                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+121-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+121-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+122            </intent-filter>
+123            <intent-filter>
+123-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+124                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+124-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+124-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+125            </intent-filter>
+126            <intent-filter>
+126-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+127                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+127-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+127-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+128            </intent-filter>
+129            <intent-filter>
+129-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+130                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+130-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+130-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\fe4593e200369c79d1f01e8f1170eab0\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+131            </intent-filter>
+132        </receiver>
+133    </application>
+134
+135</manifest>

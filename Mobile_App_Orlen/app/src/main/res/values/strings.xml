@@ -64,4 +64,9 @@
     <string name="success_save">Measurements saved successfully</string>
     <string name="save">Zapisz</string>
     <string name="cancel">Anuluj</string>
+
+    <!-- Safety Alarm -->
+    <string name="alarm_location_fetching">Twoja lokalizacja: Pobieranie...</string>
+    <string name="alarm_location_no_permission">Brak uprawnień do lokalizacji</string>
+    <string name="alarm_location_format">Twoja lokalizacja:\n%1$s, %2$s</string>
 </resources>

@@ -4063,6 +4063,8 @@ id btnMap
 id btnNewMeasurement
 id btnRefreshLocation
 id btnSave
+id btn_cancel
+id btn_save
 id bubble_description
 id bubble_image
 id bubble_moreinfo
@@ -4153,8 +4155,7 @@ id enterAlways
 id enterAlwaysCollapsed
 id entireSpace
 id escape
-id etConcentration
-id etLocation
+id et_ch4
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -4365,6 +4366,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id rvHistory
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -4469,6 +4471,7 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id til_ch4
 id time
 id title
 id titleDividerNoCustom
@@ -4492,7 +4495,10 @@ id triangle
 id tvAlarmDetails
 id tvAnomalyCount
 id tvAppName
+id tvCh4
 id tvCurrentLocation
+id tvDate
+id tvEmptyHistory
 id tvEvacuateNow
 id tvGpsStatus
 id tvLastMeasurements
@@ -4500,10 +4506,13 @@ id tvLatitude
 id tvLongitude
 id tvMeasurementsCount
 id tvMethaneValue
+id tvStatus
 id tvSubtitle
 id tvSystemStatus
 id tvWeather
 id tvWeatherAlarm
+id tv_subtitle
+id tv_title
 id unchecked
 id uniform
 id unlabeled
@@ -4656,6 +4665,7 @@ layout activity_add_measurement
 layout activity_alerts
 layout activity_history
 layout activity_main
+layout activity_manual_entry
 layout activity_map
 layout activity_safety_alarm
 layout bonuspack_bubble
@@ -4677,6 +4687,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_measurement
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -4776,6 +4787,7 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string about
 string about_message
+string add_manual_measurement
 string add_measurement_subtitle
 string add_measurement_title
 string alarm_location_fetching
@@ -4824,10 +4836,13 @@ string call_notification_hang_up_action
 string call_notification_incoming_text
 string call_notification_ongoing_text
 string call_notification_screening_text
+string cancel
+string ch4_concentration
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string clear_text_end_icon_content_description
+string co_concentration
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -4849,7 +4864,9 @@ string common_signin_button_text_long
 string compass
 string cyclemap
 string error_a11y_label
+string error_at_least_one_field
 string error_icon_content_description
+string error_invalid_value
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
@@ -4914,6 +4931,7 @@ string m3_sys_motion_easing_standard_accelerate
 string m3_sys_motion_easing_standard_decelerate
 string main_subtitle
 string main_title
+string manual_entry_title
 string map_mode
 string map_refresh
 string map_title
@@ -5032,6 +5050,7 @@ string path_password_strike_through
 string public_transport
 string roads_nl
 string samples
+string save
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
@@ -5043,9 +5062,11 @@ string set_mode_show_me
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string snapshot
+string so2_concentration
 string states
 string status_bar_notification_info_overflow
 string status_connected
+string success_save
 string topo
 string unknown
 string weather_error
