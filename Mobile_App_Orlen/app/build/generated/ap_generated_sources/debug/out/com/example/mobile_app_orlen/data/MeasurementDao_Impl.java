@@ -34,7 +34,7 @@ public final class MeasurementDao_Impl implements MeasurementDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "INSERT OR ABORT INTO `measurements` (`id`,`userId`,`coValue`,`so2Value`,`ch4Value`,`timestamp`,`isAnomaly`,`notes`) VALUES (nullif(?, 0),?,?,?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `measurements` (`id`,`userId`,`ch4Value`,`timestamp`,`isAnomaly`,`notes`) VALUES (nullif(?, 0),?,?,?,?,?)";
       }
 
       @Override
@@ -46,16 +46,14 @@ public final class MeasurementDao_Impl implements MeasurementDao {
         } else {
           statement.bindString(2, entity.userId);
         }
-        statement.bindDouble(3, entity.coValue);
-        statement.bindDouble(4, entity.so2Value);
-        statement.bindDouble(5, entity.ch4Value);
-        statement.bindLong(6, entity.timestamp);
+        statement.bindDouble(3, entity.ch4Value);
+        statement.bindLong(4, entity.timestamp);
         final int _tmp = entity.isAnomaly ? 1 : 0;
-        statement.bindLong(7, _tmp);
+        statement.bindLong(5, _tmp);
         if (entity.notes == null) {
-          statement.bindNull(8);
+          statement.bindNull(6);
         } else {
-          statement.bindString(8, entity.notes);
+          statement.bindString(6, entity.notes);
         }
       }
     };
@@ -91,8 +89,6 @@ public final class MeasurementDao_Impl implements MeasurementDao {
         try {
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
           final int _cursorIndexOfUserId = CursorUtil.getColumnIndexOrThrow(_cursor, "userId");
-          final int _cursorIndexOfCoValue = CursorUtil.getColumnIndexOrThrow(_cursor, "coValue");
-          final int _cursorIndexOfSo2Value = CursorUtil.getColumnIndexOrThrow(_cursor, "so2Value");
           final int _cursorIndexOfCh4Value = CursorUtil.getColumnIndexOrThrow(_cursor, "ch4Value");
           final int _cursorIndexOfTimestamp = CursorUtil.getColumnIndexOrThrow(_cursor, "timestamp");
           final int _cursorIndexOfIsAnomaly = CursorUtil.getColumnIndexOrThrow(_cursor, "isAnomaly");
@@ -106,10 +102,6 @@ public final class MeasurementDao_Impl implements MeasurementDao {
             } else {
               _tmpUserId = _cursor.getString(_cursorIndexOfUserId);
             }
-            final double _tmpCoValue;
-            _tmpCoValue = _cursor.getDouble(_cursorIndexOfCoValue);
-            final double _tmpSo2Value;
-            _tmpSo2Value = _cursor.getDouble(_cursorIndexOfSo2Value);
             final double _tmpCh4Value;
             _tmpCh4Value = _cursor.getDouble(_cursorIndexOfCh4Value);
             final long _tmpTimestamp;
@@ -124,7 +116,7 @@ public final class MeasurementDao_Impl implements MeasurementDao {
             } else {
               _tmpNotes = _cursor.getString(_cursorIndexOfNotes);
             }
-            _item = new Measurement(_tmpUserId,_tmpCoValue,_tmpSo2Value,_tmpCh4Value,_tmpTimestamp,_tmpIsAnomaly,_tmpNotes);
+            _item = new Measurement(_tmpUserId,_tmpCh4Value,_tmpTimestamp,_tmpIsAnomaly,_tmpNotes);
             _item.id = _cursor.getInt(_cursorIndexOfId);
             _result.add(_item);
           }
@@ -153,8 +145,6 @@ public final class MeasurementDao_Impl implements MeasurementDao {
         try {
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
           final int _cursorIndexOfUserId = CursorUtil.getColumnIndexOrThrow(_cursor, "userId");
-          final int _cursorIndexOfCoValue = CursorUtil.getColumnIndexOrThrow(_cursor, "coValue");
-          final int _cursorIndexOfSo2Value = CursorUtil.getColumnIndexOrThrow(_cursor, "so2Value");
           final int _cursorIndexOfCh4Value = CursorUtil.getColumnIndexOrThrow(_cursor, "ch4Value");
           final int _cursorIndexOfTimestamp = CursorUtil.getColumnIndexOrThrow(_cursor, "timestamp");
           final int _cursorIndexOfIsAnomaly = CursorUtil.getColumnIndexOrThrow(_cursor, "isAnomaly");
@@ -168,10 +158,6 @@ public final class MeasurementDao_Impl implements MeasurementDao {
             } else {
               _tmpUserId = _cursor.getString(_cursorIndexOfUserId);
             }
-            final double _tmpCoValue;
-            _tmpCoValue = _cursor.getDouble(_cursorIndexOfCoValue);
-            final double _tmpSo2Value;
-            _tmpSo2Value = _cursor.getDouble(_cursorIndexOfSo2Value);
             final double _tmpCh4Value;
             _tmpCh4Value = _cursor.getDouble(_cursorIndexOfCh4Value);
             final long _tmpTimestamp;
@@ -186,7 +172,7 @@ public final class MeasurementDao_Impl implements MeasurementDao {
             } else {
               _tmpNotes = _cursor.getString(_cursorIndexOfNotes);
             }
-            _item = new Measurement(_tmpUserId,_tmpCoValue,_tmpSo2Value,_tmpCh4Value,_tmpTimestamp,_tmpIsAnomaly,_tmpNotes);
+            _item = new Measurement(_tmpUserId,_tmpCh4Value,_tmpTimestamp,_tmpIsAnomaly,_tmpNotes);
             _item.id = _cursor.getInt(_cursorIndexOfId);
             _result.add(_item);
           }
@@ -218,8 +204,6 @@ public final class MeasurementDao_Impl implements MeasurementDao {
     try {
       final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfUserId = CursorUtil.getColumnIndexOrThrow(_cursor, "userId");
-      final int _cursorIndexOfCoValue = CursorUtil.getColumnIndexOrThrow(_cursor, "coValue");
-      final int _cursorIndexOfSo2Value = CursorUtil.getColumnIndexOrThrow(_cursor, "so2Value");
       final int _cursorIndexOfCh4Value = CursorUtil.getColumnIndexOrThrow(_cursor, "ch4Value");
       final int _cursorIndexOfTimestamp = CursorUtil.getColumnIndexOrThrow(_cursor, "timestamp");
       final int _cursorIndexOfIsAnomaly = CursorUtil.getColumnIndexOrThrow(_cursor, "isAnomaly");
@@ -233,10 +217,6 @@ public final class MeasurementDao_Impl implements MeasurementDao {
         } else {
           _tmpUserId = _cursor.getString(_cursorIndexOfUserId);
         }
-        final double _tmpCoValue;
-        _tmpCoValue = _cursor.getDouble(_cursorIndexOfCoValue);
-        final double _tmpSo2Value;
-        _tmpSo2Value = _cursor.getDouble(_cursorIndexOfSo2Value);
         final double _tmpCh4Value;
         _tmpCh4Value = _cursor.getDouble(_cursorIndexOfCh4Value);
         final long _tmpTimestamp;
@@ -251,7 +231,7 @@ public final class MeasurementDao_Impl implements MeasurementDao {
         } else {
           _tmpNotes = _cursor.getString(_cursorIndexOfNotes);
         }
-        _item = new Measurement(_tmpUserId,_tmpCoValue,_tmpSo2Value,_tmpCh4Value,_tmpTimestamp,_tmpIsAnomaly,_tmpNotes);
+        _item = new Measurement(_tmpUserId,_tmpCh4Value,_tmpTimestamp,_tmpIsAnomaly,_tmpNotes);
         _item.id = _cursor.getInt(_cursorIndexOfId);
         _result.add(_item);
       }

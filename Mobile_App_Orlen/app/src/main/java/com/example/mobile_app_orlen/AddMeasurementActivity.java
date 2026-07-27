@@ -7,7 +7,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.mobile_app_orlen.data.model;
 import com.google.android.material.textfield.TextInputEditText;
+import android.content.Intent;
 
 public class AddMeasurementActivity extends AppCompatActivity {
 
@@ -39,6 +41,21 @@ public class AddMeasurementActivity extends AppCompatActivity {
             switch (status) {
                 case "SUCCESS":
                     Toast.makeText(this, R.string.success_save, Toast.LENGTH_SHORT).show();
+                    
+                    String ch4Str = etCh4.getText() != null ? etCh4.getText().toString() : "0";
+                    try {
+                        double val = Double.parseDouble(ch4Str);
+                        if (model.getMethaneSafetyLevel(val) == model.SafetyLevel.ALERT) {
+                            Intent intent = new Intent(this, SafetyAlarmActivity.class);
+                            intent.putExtra("gasName", "Metan");
+                            intent.putExtra("concentration", val);
+                            intent.putExtra("stationName", "Pomiar ręczny");
+                            startActivity(intent);
+                        }
+                    } catch (Exception e) {
+                        // ignore
+                    }
+
                     finish();
                     break;
                 case "ERROR_EMPTY":

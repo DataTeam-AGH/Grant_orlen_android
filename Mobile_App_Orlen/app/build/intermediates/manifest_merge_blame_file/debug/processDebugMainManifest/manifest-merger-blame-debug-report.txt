@@ -12,20 +12,20 @@
 9-->INJECTED
 10
 11    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-11-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:5:5-79
-11-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:5:22-76
+11-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:5:5-79
+11-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:5:22-76
 12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-12-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:6:5-81
-12-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:6:22-78
+12-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:6:5-81
+12-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:6:22-78
 13    <uses-permission android:name="android.permission.INTERNET" />
-13-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:7:5-67
-13-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:7:22-64
+13-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:7:5-67
+13-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:7:22-64
 14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-14-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:8:5-79
-14-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:8:22-76
+14-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:8:5-79
+14-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:8:22-76
 15    <uses-permission android:name="android.permission.VIBRATE" />
-15-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:9:5-66
-15-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:9:22-63
+15-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:9:5-66
+15-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:9:22-63
 16
 17    <supports-screens
 17-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\cypri\.gradle\caches\9.3.1\transforms\51124dfa92d210973b04a397629e93a5\workspace\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:9:5-12:40
@@ -73,87 +73,87 @@
 39-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7245295bbfde9365fbc33a9d62c195f9\workspace\transformed\core-1.18.0\AndroidManifest.xml:26:22-94
 40
 41    <application
-41-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:10:5-42:19
+41-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:10:5-42:19
 42        android:allowBackup="true"
-42-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:11:9-35
+42-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:11:9-35
 43        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 43-->[androidx.core:core:1.18.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\7245295bbfde9365fbc33a9d62c195f9\workspace\transformed\core-1.18.0\AndroidManifest.xml:28:18-86
 44        android:dataExtractionRules="@xml/data_extraction_rules"
-44-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:12:9-65
+44-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:12:9-65
 45        android:debuggable="true"
 46        android:extractNativeLibs="false"
 46-->INJECTED
 47        android:fullBackupContent="@xml/backup_rules"
-47-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:13:9-54
+47-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:13:9-54
 48        android:icon="@mipmap/ic_launcher"
-48-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:14:9-43
+48-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:14:9-43
 49        android:label="@string/app_name"
-49-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:15:9-41
+49-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:15:9-41
 50        android:roundIcon="@mipmap/ic_launcher_round"
-50-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:16:9-54
+50-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:16:9-54
 51        android:supportsRtl="true"
-51-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:17:9-35
+51-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:17:9-35
 52        android:testOnly="true"
 53        android:theme="@style/Theme.Mobile_App_Orlen" >
-53-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:18:9-54
+53-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:18:9-54
 54
 55        <!-- Klucz API Map Google -->
 56        <meta-data
-56-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:21:9-23:42
+56-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:21:9-23:42
 57            android:name="com.google.android.geo.API_KEY"
-57-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:22:13-58
+57-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:22:13-58
 58            android:value="MY_API_KEY" />
-58-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:23:13-39
+58-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:23:13-39
 59
 60        <activity
-60-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:25:9-32:20
+60-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:25:9-32:20
 61            android:name="com.example.mobile_app_orlen.MainActivity"
-61-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:26:13-41
+61-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:26:13-41
 62            android:exported="true" >
-62-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:27:13-36
+62-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:27:13-36
 63            <intent-filter>
-63-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:28:13-31:29
+63-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:28:13-31:29
 64                <action android:name="android.intent.action.MAIN" />
-64-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:29:17-69
-64-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:29:25-66
+64-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:29:17-69
+64-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:29:25-66
 65
 66                <category android:name="android.intent.category.LAUNCHER" />
-66-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:30:17-77
-66-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:30:27-74
+66-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:30:17-77
+66-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:30:27-74
 67            </intent-filter>
 68        </activity>
 69        <activity
-69-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:34:9-89
+69-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:34:9-89
 70            android:name="com.example.mobile_app_orlen.AddMeasurementActivity"
-70-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:34:19-57
+70-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:34:19-57
 71            android:label="Dodaj pomiar" />
-71-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:34:58-86
+71-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:34:58-86
 72        <activity
-72-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:35:9-78
+72-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:35:9-78
 73            android:name="com.example.mobile_app_orlen.HistoryActivity"
-73-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:35:19-50
+73-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:35:19-50
 74            android:label="Historia" />
-74-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:35:51-75
+74-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:35:51-75
 75        <activity
-75-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:36:9-70
+75-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:36:9-70
 76            android:name="com.example.mobile_app_orlen.MapActivity"
-76-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:36:19-46
+76-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:36:19-46
 77            android:label="Mapa" />
-77-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:36:47-67
+77-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:36:47-67
 78        <activity
-78-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:37:9-75
+78-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:37:9-75
 79            android:name="com.example.mobile_app_orlen.AlertsActivity"
-79-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:37:19-49
+79-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:37:19-49
 80            android:label="Alarmy" />
-80-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:37:50-72
+80-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:37:50-72
 81        <activity
-81-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:38:9-41:52
+81-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:38:9-41:52
 82            android:name="com.example.mobile_app_orlen.SafetyAlarmActivity"
-82-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:39:13-48
+82-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:39:13-48
 83            android:label="Alarm bezpieczeństwa"
-83-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:40:13-49
+83-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:40:13-49
 84            android:screenOrientation="portrait" />
-84-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android3\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:41:13-49
+84-->C:\Users\cypri\OneDrive\Pulpit\Grant_orlen_android5\Mobile_App_Orlen\app\src\main\AndroidManifest.xml:41:13-49
 85        <activity
 85-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\cypri\.gradle\caches\9.3.1\transforms\cd4a5bddb4e9915eba5b3cbabf072862\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
 86            android:name="com.google.android.gms.common.api.GoogleApiActivity"
