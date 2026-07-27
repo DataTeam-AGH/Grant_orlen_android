@@ -1,29 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mobile_app_orlen.app-mergeDebugResources-38:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.mobile_app_orlen.app-mergeDebugResources-41:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\minhc\\AndroidStudioProjects\\Grant_orlen_android\\Mobile_App_Orlen\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "C:\\Users\\cypri\\.gradle\\caches\\9.3.1\\transforms\\f4d12dd1db749408b991b82798fff159\\workspace\\transformed\\appcompat-1.7.1\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "102",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "328"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
                     },
                     "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "174"
+                        "startLines": "6,7,8,9,10,11,12,68",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "179,249,333,417,513,615,717,7431",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "244,328,412,508,610,712,806,7515"
                     }
                 },
                 {
-                    "source": "C:\\Users\\minhc\\.gradle\\caches\\9.3.1\\transforms\\718b272c939dac45a28628129d596b4b\\workspace\\transformed\\material-1.14.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\cypri\\.gradle\\caches\\9.3.1\\transforms\\f182ccdd7b7d52801880a0d603da831e\\workspace\\transformed\\material-1.14.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -40,20 +38,22 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\minhc\\.gradle\\caches\\9.3.1\\transforms\\1ce1641fda24a483d7bd41d0b0b0b431\\workspace\\transformed\\appcompat-1.7.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\cypri\\OneDrive\\Pulpit\\Grant_orlen_android3\\Mobile_App_Orlen\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,125,209,293,389,491,593,687",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "120,204,288,384,486,588,682,771"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "102",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "328"
                     },
                     "to": {
-                        "startLines": "6,7,8,9,10,11,12,68",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "179,249,333,417,513,615,717,7431",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "244,328,412,508,610,712,806,7515"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "174"
                     }
                 }
             ]

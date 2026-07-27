@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mobile_app_orlen.app-mergeDebugResources-38:/values-land/values-land.xml",
+            "outputFile": "com.example.mobile_app_orlen.app-mergeDebugResources-41:/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\minhc\\.gradle\\caches\\9.3.1\\transforms\\718b272c939dac45a28628129d596b4b\\workspace\\transformed\\material-1.14.0\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\cypri\\.gradle\\caches\\9.3.1\\transforms\\f182ccdd7b7d52801880a0d603da831e\\workspace\\transformed\\material-1.14.0\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,22,28,34,46,52",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\minhc\\.gradle\\caches\\9.3.1\\transforms\\1ce1641fda24a483d7bd41d0b0b0b431\\workspace\\transformed\\appcompat-1.7.1\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\cypri\\.gradle\\caches\\9.3.1\\transforms\\f4d12dd1db749408b991b82798fff159\\workspace\\transformed\\appcompat-1.7.1\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
