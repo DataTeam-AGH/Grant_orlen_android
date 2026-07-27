@@ -28,8 +28,11 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import com.example.mobile_app_orlen.data.AppDatabase;
+import com.example.mobile_app_orlen.data.Measurement;
 import com.example.mobile_app_orlen.data.model;
 
+import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
@@ -52,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String WEATHER_API_KEY = "bd5e378503939ddaee76f12ad7a97608";
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1001;
 
-    private double currentMethaneConcentration = 12.4;
+    private double currentMethaneConcentration = 0.0;
     private boolean userIsNearStation = true;
 
     @Override
@@ -64,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         initWeatherService();
 
         connectViews();
-        loadExampleData();
+        // loadExampleData(); // Usunięte na rzecz dynamicznego ładowania w onResume
         setupButtons();
         fetchLocationAndWeather();
     }
@@ -194,11 +197,42 @@ public class MainActivity extends AppCompatActivity {
         btnAlerts = findViewById(R.id.btnAlerts);
     }
 
-    private void loadExampleData() {
-        updateGasDisplay(tvMethaneValue, progressMethane, currentMethaneConcentration);
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadLastMeasurement();
+    }
 
+    private void loadLastMeasurement() {
+        AppDatabase db = AppDatabase.getDatabase(this);
+        db.measurementDao().getAllMeasurements().observe(this, measurements -> {
+            if (measurements != null && !measurements.isEmpty()) {
+                Measurement last = measurements.get(0);
+                currentMethaneConcentration = last.ch4Value;
+                updateGasDisplay(tvMethaneValue, progressMethane, currentMethaneConcentration);
+                updateSystemStatus(currentMethaneConcentration);
+                
+                if (tvMeasurementsCount != null) tvMeasurementsCount.setText(String.valueOf(measurements.size()));
+                
+                long anomalyCount = 0;
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                    anomalyCount = measurements.stream().filter(m -> m.isAnomaly).count();
+                }
+                if (tvAnomalyCount != null) tvAnomalyCount.setText(String.valueOf(anomalyCount));
+            } else {
+                // Domyślnie SAFE przy braku danych
+                currentMethaneConcentration = 0.0;
+                updateGasDisplay(tvMethaneValue, progressMethane, 0.0);
+                updateSystemStatus(0.0);
+                if (tvMeasurementsCount != null) tvMeasurementsCount.setText("0");
+                if (tvAnomalyCount != null) tvAnomalyCount.setText("0");
+            }
+        });
+    }
+
+    private void updateSystemStatus(double value) {
         if (tvSystemStatus != null) {
-            model.SafetyLevel level = model.getMethaneSafetyLevel(currentMethaneConcentration);
+            model.SafetyLevel level = model.getMethaneSafetyLevel(value);
             tvSystemStatus.setText(model.getStatusMessage(level));
             
             int color;
@@ -209,10 +243,6 @@ public class MainActivity extends AppCompatActivity {
             }
             tvSystemStatus.setBackgroundTintList(ColorStateList.valueOf(color));
         }
-
-        if (tvMeasurementsCount != null) tvMeasurementsCount.setText("128");
-        if (tvAnomalyCount != null) tvAnomalyCount.setText("2");
-        if (tvWeather != null) tvWeather.setText("Temperatura: 18°C  |  Wilgotność: 64%  |  Wiatr: 3.5 m/s");
     }
 
     private void updateGasDisplay(TextView textView, ProgressBar progressBar, double value) {
