@@ -32,16 +32,10 @@ public class ManualEntryViewModel extends AndroidViewModel {
             return;
         }
 
-        // Create measurement object
-        // For now, using a hardcoded userId "default_user"
-        double coVal = 0.0;
-        double so2Val = 0.0;
         double ch4Val = Double.parseDouble(ch4);
         
         Measurement measurement = new Measurement(
                 "default_user",
-                coVal,
-                so2Val,
                 ch4Val,
                 System.currentTimeMillis(),
                 false,

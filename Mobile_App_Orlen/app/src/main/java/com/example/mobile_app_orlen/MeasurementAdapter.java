@@ -1,5 +1,6 @@
 package com.example.mobile_app_orlen;
 
+import android.content.res.ColorStateList;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mobile_app_orlen.data.Measurement;
+import com.example.mobile_app_orlen.data.model;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -61,14 +63,25 @@ public class MeasurementAdapter extends ListAdapter<Measurement, MeasurementAdap
         public void bind(Measurement measurement) {
             tvDate.setText(dateFormat.format(new Date(measurement.timestamp)));
             tvCh4.setText(String.format(Locale.getDefault(), "CH4: %.2f %%", measurement.ch4Value));
-            
-            if (measurement.isAnomaly) {
-                tvStatus.setText("ANOMALIA");
-                tvStatus.setTextColor(itemView.getContext().getResources().getColor(android.R.color.holo_red_dark));
-            } else {
-                tvStatus.setText("OK");
-                tvStatus.setTextColor(itemView.getContext().getResources().getColor(android.R.color.holo_green_dark));
+
+            model.SafetyLevel level = model.getMethaneSafetyLevel(measurement.ch4Value);
+            tvStatus.setText(model.getStatusMessage(level));
+
+            int color;
+            switch (level) {
+                case ALERT:
+                    color = itemView.getContext().getResources().getColor(android.R.color.holo_red_dark);
+                    break;
+                case WARNING:
+                    color = itemView.getContext().getResources().getColor(android.R.color.holo_orange_dark);
+                    break;
+                case SAFE:
+                default:
+                    color = itemView.getContext().getResources().getColor(android.R.color.holo_green_dark);
+                    break;
             }
+            tvStatus.setBackgroundTintList(ColorStateList.valueOf(color));
+            tvStatus.setTextColor(itemView.getContext().getResources().getColor(android.R.color.white));
         }
     }
 }

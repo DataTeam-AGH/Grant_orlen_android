@@ -1,6 +1,6 @@
 package com.example.mobile_app_orlen;
 
-import android.app.Activity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -28,9 +28,11 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import com.example.mobile_app_orlen.data.model;
+
 import java.util.Locale;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     private TextView tvMethaneValue;
     private ProgressBar progressMethane;
@@ -47,10 +49,8 @@ public class MainActivity extends Activity {
 
     private FusedLocationProviderClient fusedLocationClient;
     private WeatherService weatherService;
-    private static final String WEATHER_API_KEY = "bd5e378503939ddaee76f12ad7a97608"; // Placeholder API Key
+    private static final String WEATHER_API_KEY = "bd5e378503939ddaee76f12ad7a97608";
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1001;
-
-    private static final double METHANE_DANGER_THRESHOLD = 5.0;
 
     private double currentMethaneConcentration = 12.4;
     private boolean userIsNearStation = true;
@@ -80,10 +80,9 @@ public class MainActivity extends Activity {
 
     private void fetchLocationAndWeather() {
         if (tvWeather != null) {
-            tvWeather.setText(getString(R.string.weather_loading));
+            tvWeather.setText("Pobieranie pogody...");
         }
 
-        // Prośba o OBA uprawnienia jednocześnie (wymagane na nowszych Androidach)
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ||
             ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             
@@ -96,7 +95,7 @@ public class MainActivity extends Activity {
         CancellationTokenSource cts = new CancellationTokenSource();
         CurrentLocationRequest clr = new CurrentLocationRequest.Builder()
                 .setPriority(Priority.PRIORITY_HIGH_ACCURACY)
-                .setMaxUpdateAgeMillis(60000) // Może być z ostatniej minuty
+                .setMaxUpdateAgeMillis(60000)
                 .build();
 
         fusedLocationClient.getCurrentLocation(clr, cts.getToken())
@@ -104,7 +103,6 @@ public class MainActivity extends Activity {
                 if (location != null) {
                     getWeatherForLocation(location.getLatitude(), location.getLongitude());
                 } else {
-                    // Jeśli brak fixa, spróbuj ostatnią znaną
                     fusedLocationClient.getLastLocation().addOnSuccessListener(lastLoc -> {
                         if (lastLoc != null) {
                             getWeatherForLocation(lastLoc.getLatitude(), lastLoc.getLongitude());
@@ -128,7 +126,7 @@ public class MainActivity extends Activity {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 fetchLocationAndWeather();
             } else {
-                getWeatherForLocation(50.0647, 19.9450); // Brak uprawnień -> domyślnie Kraków
+                getWeatherForLocation(50.0647, 19.9450);
             }
         }
     }
@@ -142,7 +140,7 @@ public class MainActivity extends Activity {
                             updateWeatherUi(response.body());
                         } else {
                             if (tvWeather != null) {
-                                tvWeather.setText("Błąd API: " + response.code() + " (Sprawdź klucz)");
+                                tvWeather.setText("Błąd API: " + response.code());
                             }
                         }
                     }
@@ -186,12 +184,10 @@ public class MainActivity extends Activity {
     private void connectViews() {
         tvMethaneValue = findViewById(R.id.tvMethaneValue);
         progressMethane = findViewById(R.id.progressMethane);
-
         tvSystemStatus = findViewById(R.id.tvSystemStatus);
         tvMeasurementsCount = findViewById(R.id.tvMeasurementsCount);
         tvAnomalyCount = findViewById(R.id.tvAnomalyCount);
         tvWeather = findViewById(R.id.tvWeather);
-
         btnNewMeasurement = findViewById(R.id.btnNewMeasurement);
         btnHistory = findViewById(R.id.btnHistory);
         btnMap = findViewById(R.id.btnMap);
@@ -199,136 +195,77 @@ public class MainActivity extends Activity {
     }
 
     private void loadExampleData() {
-        updateGasDisplay(
-                tvMethaneValue,
-                progressMethane,
-                currentMethaneConcentration + " %",
-                85,
-                100
-        );
+        updateGasDisplay(tvMethaneValue, progressMethane, currentMethaneConcentration);
 
         if (tvSystemStatus != null) {
-            tvSystemStatus.setText("● System aktywny");
+            model.SafetyLevel level = model.getMethaneSafetyLevel(currentMethaneConcentration);
+            tvSystemStatus.setText(model.getStatusMessage(level));
+            
+            int color;
+            switch (level) {
+                case ALERT: color = Color.parseColor("#F44336"); break;
+                case WARNING: color = Color.parseColor("#FFC107"); break;
+                default: color = Color.parseColor("#4CAF50"); break;
+            }
+            tvSystemStatus.setBackgroundTintList(ColorStateList.valueOf(color));
         }
 
-        if (tvMeasurementsCount != null) {
-            tvMeasurementsCount.setText("128");
-        }
-
-        if (tvAnomalyCount != null) {
-            tvAnomalyCount.setText("2");
-        }
-
-        if (tvWeather != null) {
-            tvWeather.setText(
-                    "Temperatura: 18°C  |  Wilgotność: 64%  |  Wiatr: 3.5 m/s"
-            );
-        }
+        if (tvMeasurementsCount != null) tvMeasurementsCount.setText("128");
+        if (tvAnomalyCount != null) tvAnomalyCount.setText("2");
+        if (tvWeather != null) tvWeather.setText("Temperatura: 18°C  |  Wilgotność: 64%  |  Wiatr: 3.5 m/s");
     }
 
-    private void updateGasDisplay(
-            TextView textView,
-            ProgressBar progressBar,
-            String valueText,
-            int progress,
-            int max
-    ) {
+    private void updateGasDisplay(TextView textView, ProgressBar progressBar, double value) {
         if (textView != null) {
-            textView.setText(valueText);
+            textView.setText(String.format(Locale.getDefault(), "%.1f %%", value));
         }
 
-        if (progressBar == null) {
-            return;
+        if (progressBar != null) {
+            progressBar.setMax(100);
+            progressBar.setProgress((int) value);
+
+            model.SafetyLevel level = model.getMethaneSafetyLevel(value);
+            int color;
+            switch (level) {
+                case ALERT: color = Color.parseColor("#F44336"); break;
+                case WARNING: color = Color.parseColor("#FFC107"); break;
+                default: color = Color.parseColor("#4CAF50"); break;
+            }
+            progressBar.setProgressTintList(ColorStateList.valueOf(color));
         }
-
-        progressBar.setMax(max);
-        progressBar.setProgress(progress);
-
-        float ratio = (float) progress / max;
-        int color;
-
-        if (ratio < 0.3f) {
-            color = Color.parseColor("#4CAF50");
-        } else if (ratio < 0.7f) {
-            color = Color.parseColor("#FFC107");
-        } else {
-            color = Color.parseColor("#F44336");
-        }
-
-        progressBar.setProgressTintList(
-                ColorStateList.valueOf(color)
-        );
     }
 
     private void setupButtons() {
         if (btnNewMeasurement != null) {
             btnNewMeasurement.setOnClickListener(v -> {
-                Intent intent = new Intent(
-                        MainActivity.this,
-                        AddMeasurementActivity.class
-                );
-
-                startActivity(intent);
+                startActivity(new Intent(MainActivity.this, AddMeasurementActivity.class));
             });
         }
-
         if (btnHistory != null) {
             btnHistory.setOnClickListener(v -> {
-                Intent intent = new Intent(
-                        MainActivity.this,
-                        HistoryActivity.class
-                );
-
-                startActivity(intent);
+                startActivity(new Intent(MainActivity.this, HistoryActivity.class));
             });
         }
-
         if (btnMap != null) {
             btnMap.setOnClickListener(v -> {
-                Intent intent = new Intent(
-                        MainActivity.this,
-                        MapActivity.class
-                );
-
-                startActivity(intent);
+                startActivity(new Intent(MainActivity.this, MapActivity.class));
             });
         }
-
         if (btnAlerts != null) {
             btnAlerts.setOnClickListener(v -> {
-                Intent intent = new Intent(
-                        MainActivity.this,
-                        SafetyAlarmActivity.class
-                );
-
-                startActivity(intent);
+                startActivity(new Intent(MainActivity.this, SafetyAlarmActivity.class));
             });
         }
     }
 
     private void checkSafetyAlarm() {
-        boolean dangerousConcentration =
-                currentMethaneConcentration >= METHANE_DANGER_THRESHOLD;
-
-        if (!userIsNearStation || !dangerousConcentration) {
-            return;
+        model.SafetyLevel level = model.getMethaneSafetyLevel(currentMethaneConcentration);
+        if (userIsNearStation && level == model.SafetyLevel.ALERT) {
+            Intent intent = new Intent(MainActivity.this, SafetyAlarmActivity.class);
+            intent.putExtra("gasName", "Metan");
+            intent.putExtra("concentration", currentMethaneConcentration);
+            intent.putExtra("stationName", "Kraków Północ");
+            startActivity(intent);
         }
-
-        Intent intent = new Intent(
-                MainActivity.this,
-                SafetyAlarmActivity.class
-        );
-
-        intent.putExtra("gasName", "Metan");
-        intent.putExtra(
-                "concentration",
-                currentMethaneConcentration
-        );
-        intent.putExtra(
-                "stationName",
-                "Kraków Północ"
-        );
-
-        startActivity(intent);
     }
 }
