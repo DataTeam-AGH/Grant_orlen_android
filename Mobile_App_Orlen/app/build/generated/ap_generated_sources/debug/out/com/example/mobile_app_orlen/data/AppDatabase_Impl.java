@@ -31,12 +31,12 @@ public final class AppDatabase_Impl extends AppDatabase {
   @Override
   @NonNull
   protected SupportSQLiteOpenHelper createOpenHelper(@NonNull final DatabaseConfiguration config) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(1) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(4) {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
-        db.execSQL("CREATE TABLE IF NOT EXISTS `measurements` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `userId` TEXT, `coValue` REAL NOT NULL, `so2Value` REAL NOT NULL, `ch4Value` REAL NOT NULL, `timestamp` INTEGER NOT NULL, `isAnomaly` INTEGER NOT NULL, `notes` TEXT)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `measurements` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `userId` TEXT, `ch4Value` REAL NOT NULL, `timestamp` INTEGER NOT NULL, `isAnomaly` INTEGER NOT NULL, `notes` TEXT)");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '5857bf10978659573ecf0fa1d0826955')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '9bc9851883a6df2488c1e8e612b4ca9c')");
       }
 
       @Override
@@ -85,11 +85,9 @@ public final class AppDatabase_Impl extends AppDatabase {
       @NonNull
       public RoomOpenHelper.ValidationResult onValidateSchema(
           @NonNull final SupportSQLiteDatabase db) {
-        final HashMap<String, TableInfo.Column> _columnsMeasurements = new HashMap<String, TableInfo.Column>(8);
+        final HashMap<String, TableInfo.Column> _columnsMeasurements = new HashMap<String, TableInfo.Column>(6);
         _columnsMeasurements.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsMeasurements.put("userId", new TableInfo.Column("userId", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsMeasurements.put("coValue", new TableInfo.Column("coValue", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsMeasurements.put("so2Value", new TableInfo.Column("so2Value", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsMeasurements.put("ch4Value", new TableInfo.Column("ch4Value", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsMeasurements.put("timestamp", new TableInfo.Column("timestamp", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsMeasurements.put("isAnomaly", new TableInfo.Column("isAnomaly", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -105,7 +103,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "5857bf10978659573ecf0fa1d0826955", "d3f6de64a0cb5784556318604780e916");
+    }, "9bc9851883a6df2488c1e8e612b4ca9c", "698b6baf7732f9b332dd0754cb873550");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;
