@@ -51,18 +51,28 @@ public class MapActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // NAPRAWA BŁĘDU 403 - Musi być na samym początku przed super.onCreate
-        Configuration.getInstance().setUserAgentValue("OrlenMonitoring_" + getPackageName() + "_" + System.currentTimeMillis());
+        // 1. CAŁKOWITY RESET I NAPRAWA 403
+        // UNIKAMY "com.example" - serwery OSM to blokują!
+        String myUserAgent = "OrlenGasMonitorSystem/1.2 (cyprian.orlen.project@gmail.com)";
+        Configuration.getInstance().setUserAgentValue(myUserAgent);
         
         super.onCreate(savedInstanceState);
 
+        // 2. Ładowanie i czyszczenie błędnych ścieżek
         Context ctx = getApplicationContext();
         Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
         
-        // Używamy nowej ścieżki cache, żeby ominąć zablokowane kafelki
-        File osmdroidCache = new File(getCacheDir(), "osmdroid_tiles_new_v3");
-        if (!osmdroidCache.exists()) osmdroidCache.mkdirs();
-        Configuration.getInstance().setOsmdroidTileCache(osmdroidCache);
+        // Wymuszamy User-Agent ponownie po load()
+        Configuration.getInstance().setUserAgentValue(myUserAgent);
+        
+        // 3. Ustawienie ZUPEŁNIE NOWEJ ścieżki dla plików map (całkowity reset)
+        File mapRoot = new File(getFilesDir(), "osmdroid_v6_final");
+        if (!mapRoot.exists()) mapRoot.mkdirs();
+        Configuration.getInstance().setOsmdroidBasePath(mapRoot);
+        
+        File mapCache = new File(mapRoot, "tiles");
+        if (!mapCache.exists()) mapCache.mkdirs();
+        Configuration.getInstance().setOsmdroidTileCache(mapCache);
 
         setContentView(R.layout.activity_map);
 

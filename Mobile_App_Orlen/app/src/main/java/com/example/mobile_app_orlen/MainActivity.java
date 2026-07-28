@@ -52,8 +52,9 @@ public class MainActivity extends AppCompatActivity {
 
     private FusedLocationProviderClient fusedLocationClient;
     private WeatherService weatherService;
-    private static final String WEATHER_API_KEY = "bd5e378503939ddaee76f12ad7a97608";
+    private static final String WEATHER_API_KEY = "c6ebc42aeaf95f82074837ad9ea223e9";
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1001;
+    private long lastWeatherFetchTime = 0;
 
     private double currentMethaneConcentration = 0.0;
     private boolean userIsNearStation = true;
@@ -82,8 +83,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void fetchLocationAndWeather() {
+        android.content.SharedPreferences prefs = getSharedPreferences("weather_prefs", MODE_PRIVATE);
+        long lastFetch = prefs.getLong("last_fetch", 0);
+        long lastAttempt = prefs.getLong("last_attempt", 0);
+        String lastWeather = prefs.getString("last_weather_text", "");
+        long now = System.currentTimeMillis();
+
+        // 1. Jeśli mamy świeże dane (sprzed mniej niż 10 min), używamy ich i nie pytamy API
+        if (now - lastFetch < 600000 && !lastWeather.isEmpty()) {
+            if (tvWeather != null) tvWeather.setText(lastWeather);
+            return;
+        }
+
+        // 2. Jeśli ostatnia PRÓBA (nawet nieudana) była mniej niż 5 minut temu, 
+        // używamy starego cache'u, żeby nie blokować klucza (unikanie 429)
+        if (now - lastAttempt < 300000 && !lastWeather.isEmpty()) {
+            if (tvWeather != null) tvWeather.setText(lastWeather);
+            return;
+        }
+
         if (tvWeather != null) {
-            tvWeather.setText("Pobieranie pogody...");
+            tvWeather.setText("Odświeżanie pogody...");
         }
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ||
@@ -94,6 +114,9 @@ public class MainActivity extends AppCompatActivity {
                     LOCATION_PERMISSION_REQUEST_CODE);
             return;
         }
+
+        // Zapisujemy czas próby, żeby nie spamować API przy błędach 429
+        prefs.edit().putLong("last_attempt", now).apply();
 
         CancellationTokenSource cts = new CancellationTokenSource();
         CurrentLocationRequest clr = new CurrentLocationRequest.Builder()
@@ -110,15 +133,13 @@ public class MainActivity extends AppCompatActivity {
                         if (lastLoc != null) {
                             getWeatherForLocation(lastLoc.getLatitude(), lastLoc.getLongitude());
                         } else {
-                            Toast.makeText(this, "Ustaw lokalizację w emulatorze!", Toast.LENGTH_LONG).show();
-                            getWeatherForLocation(50.0647, 19.9450);
+                            if (tvWeather != null) tvWeather.setText("Oczekiwanie na lokalizację GPS...");
                         }
                     });
                 }
             })
             .addOnFailureListener(e -> {
-                Toast.makeText(this, "Błąd GPS: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                getWeatherForLocation(50.0647, 19.9450);
+                if (tvWeather != null) tvWeather.setText("Błąd lokalizacji: " + e.getMessage());
             });
     }
 
@@ -129,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 fetchLocationAndWeather();
             } else {
-                getWeatherForLocation(50.0647, 19.9450);
+                if (tvWeather != null) tvWeather.setText("Brak uprawnień do GPS");
             }
         }
     }
@@ -143,7 +164,13 @@ public class MainActivity extends AppCompatActivity {
                             updateWeatherUi(response.body());
                         } else {
                             if (tvWeather != null) {
-                                tvWeather.setText("Błąd API: " + response.code());
+                                String cached = getSharedPreferences("weather_prefs", MODE_PRIVATE).getString("last_weather_text", "");
+                                // Jeśli błąd to 401 (zły klucz) lub 429 (limit), pokaż ostatnie znane dane
+                                if ((response.code() == 401 || response.code() == 429) && !cached.isEmpty()) {
+                                    tvWeather.setText(cached);
+                                } else {
+                                    tvWeather.setText("Błąd API: " + response.code());
+                                }
                             }
                         }
                     }
@@ -169,6 +196,22 @@ public class MainActivity extends AppCompatActivity {
                     direction
             );
             tvWeather.setText(weatherText);
+
+            // Wyciągamy sam symbol kierunku (np. "N") do cache'u alarmu
+            String shortDir = "N/A";
+            int start = direction.indexOf("(");
+            int end = direction.indexOf(")");
+            if (start != -1 && end != -1) {
+                shortDir = direction.substring(start + 1, end);
+            }
+            String windTextAlarm = String.format(Locale.US, "WIATR: %.1f m/s (%s)", weather.wind.speed, shortDir);
+
+            // Zapisz do cache, aby obie aktywności miały to samo
+            getSharedPreferences("weather_prefs", MODE_PRIVATE).edit()
+                    .putLong("last_fetch", System.currentTimeMillis())
+                    .putString("last_weather_text", weatherText)
+                    .putString("last_wind_text", windTextAlarm)
+                    .apply();
         }
     }
 
@@ -201,6 +244,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         loadLastMeasurement();
+        fetchLocationAndWeather();
     }
 
     private void loadLastMeasurement() {

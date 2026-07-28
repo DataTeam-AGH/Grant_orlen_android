@@ -44,7 +44,7 @@ public class SafetyAlarmActivity extends Activity {
     private TextView tvCurrentLocation;
     private TextView tvWeatherAlarm;
     private WeatherService weatherService;
-    private static final String WEATHER_API_KEY = "bd5e378503939ddaee76f12ad7a97608";
+    private static final String WEATHER_API_KEY = "c6ebc42aeaf95f82074837ad9ea223e9";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -228,18 +228,40 @@ public class SafetyAlarmActivity extends Activity {
     }
 
     private void getWeatherForLocation(double lat, double lon) {
+        android.content.SharedPreferences prefs = getSharedPreferences("weather_prefs", MODE_PRIVATE);
+        long lastFetch = prefs.getLong("last_fetch", 0);
+        long now = System.currentTimeMillis();
+
+
+        if (now - lastFetch < 600000) {
+            String cachedWind = prefs.getString("last_wind_text", "");
+            if (tvWeatherAlarm != null && !cachedWind.isEmpty()) {
+                tvWeatherAlarm.setText(cachedWind);
+            }
+            if (now - lastFetch < 300000) return; // Jeśli mniej niż 5 min, nie próbuj nawet pytać API
+        }
+
         weatherService.getCurrentWeather(lat, lon, WEATHER_API_KEY, "metric", "pl")
                 .enqueue(new Callback<WeatherResponse>() {
                     @Override
                     public void onResponse(Call<WeatherResponse> call, Response<WeatherResponse> response) {
                         if (response.isSuccessful() && response.body() != null) {
                             updateWeatherUi(response.body());
+                        } else {
+                            // Jeśli błąd to 401 (zły klucz) lub 429 (limit), używamy cache'u
+                            if (response.code() == 401 || response.code() == 429) {
+                                String cachedWind = getSharedPreferences("weather_prefs", MODE_PRIVATE)
+                                        .getString("last_wind_text", "");
+                                if (tvWeatherAlarm != null && !cachedWind.isEmpty()) {
+                                    tvWeatherAlarm.setText(cachedWind);
+                                }
+                            }
                         }
                     }
 
                     @Override
                     public void onFailure(Call<WeatherResponse> call, Throwable t) {
-                        if (tvWeatherAlarm != null) tvWeatherAlarm.setText("Błąd pogodowy");
+                        // W razie błędu nie czyścimy ekranu, zostawiamy co było
                     }
                 });
     }
@@ -247,8 +269,39 @@ public class SafetyAlarmActivity extends Activity {
     private void updateWeatherUi(WeatherResponse weather) {
         if (tvWeatherAlarm != null) {
             String dir = getWindDirection(weather.wind.deg);
-            tvWeatherAlarm.setText(String.format(Locale.US, "WIATR: %.1f m/s (%s)", weather.wind.speed, dir));
+            String windText = String.format(Locale.US, "WIATR: %.1f m/s (%s)", weather.wind.speed, dir);
+            tvWeatherAlarm.setText(windText);
+
+            // Przygotuj pełny tekst dla MainActivity, aby dane były spójne
+            String fullDir = getWindDirectionFull(weather.wind.deg);
+            String weatherText = String.format(
+                    Locale.US,
+                    "Temp: %.1f°C | Wilgotność: %d%% | Wiatr: %.1f m/s (%s)",
+                    weather.main.temp,
+                    weather.main.humidity,
+                    weather.wind.speed,
+                    fullDir
+            );
+
+            // Współdzielimy cache z MainActivity - aktualizujemy oba pola
+            getSharedPreferences("weather_prefs", MODE_PRIVATE).edit()
+                    .putLong("last_fetch", System.currentTimeMillis())
+                    .putString("last_wind_text", windText)
+                    .putString("last_weather_text", weatherText)
+                    .apply();
         }
+    }
+
+    private String getWindDirectionFull(int deg) {
+        if (deg >= 337.5 || deg < 22.5) return "Północny (N)";
+        if (deg >= 22.5 && deg < 67.5) return "Północno-Wschodni (NE)";
+        if (deg >= 67.5 && deg < 112.5) return "Wschodni (E)";
+        if (deg >= 112.5 && deg < 157.5) return "Południowo-Wschodni (SE)";
+        if (deg >= 157.5 && deg < 202.5) return "Południowy (S)";
+        if (deg >= 202.5 && deg < 247.5) return "Południowo-Zachodni (SW)";
+        if (deg >= 247.5 && deg < 292.5) return "Zachodni (W)";
+        if (deg >= 292.5 && deg < 337.5) return "Północno-Zachodni (NW)";
+        return "N/A";
     }
 
     private String getWindDirection(int deg) {
