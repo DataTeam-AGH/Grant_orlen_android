@@ -28,7 +28,8 @@ public class ManualEntryActivity extends AppCompatActivity {
 
         btnSave.setOnClickListener(v -> {
             String ch4 = etCh4.getText() != null ? etCh4.getText().toString() : "";
-            viewModel.saveMeasurements(ch4);
+            // Default location for manual entry if not implemented in UI yet
+            viewModel.saveMeasurements(ch4, 0.0, 0.0, "Manual Entry");
         });
 
         btnCancel.setOnClickListener(v -> finish());

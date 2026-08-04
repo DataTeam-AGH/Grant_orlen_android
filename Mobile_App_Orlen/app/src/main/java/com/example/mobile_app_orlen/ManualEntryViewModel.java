@@ -15,13 +15,15 @@ public class ManualEntryViewModel extends AndroidViewModel {
     private final MeasurementRepository repository;
     private final MutableLiveData<String> _saveStatus = new MutableLiveData<>();
     public LiveData<String> saveStatus = _saveStatus;
+    
+    private static final double METHANE_THRESHOLD = 5.0;
 
     public ManualEntryViewModel(@NonNull Application application) {
         super(application);
         repository = new MeasurementRepository(application);
     }
 
-    public void saveMeasurements(String ch4) {
+    public void saveMeasurements(String ch4, double lat, double lon, String locationName) {
         if (ch4.isEmpty()) {
             _saveStatus.setValue("ERROR_EMPTY");
             return;
@@ -32,20 +34,20 @@ public class ManualEntryViewModel extends AndroidViewModel {
             return;
         }
 
-        // Create measurement object
-        // For now, using a hardcoded userId "default_user"
-        double coVal = 0.0;
-        double so2Val = 0.0;
         double ch4Val = Double.parseDouble(ch4);
+        boolean isAnomaly = ch4Val > METHANE_THRESHOLD;
         
         Measurement measurement = new Measurement(
                 "default_user",
-                coVal,
-                so2Val,
+                0.0,
+                0.0,
                 ch4Val,
                 System.currentTimeMillis(),
-                false,
-                ""
+                isAnomaly,
+                "",
+                lat,
+                lon,
+                locationName
         );
 
         repository.insert(measurement);
