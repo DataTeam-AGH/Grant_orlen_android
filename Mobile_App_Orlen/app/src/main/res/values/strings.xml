@@ -28,6 +28,14 @@
     <string name="label_location">Lokalizacja / Sektor</string>
     <string name="hint_location">np. PMG Wierzchowice</string>
     <string name="btn_save">ZAPISZ W BAZIE</string>
+    <string name="label_methane_concentration">Stężenie Metanu</string>
+    <string name="label_location_selection">Lokalizacja</string>
+    <string name="rb_use_gps">Użyj GPS</string>
+    <string name="rb_manual_entry">Wpisz ręcznie</string>
+    <string name="btn_fetch_gps">Pobierz koordynaty GPS</string>
+    <string name="label_lat">Szerokość (Lat)</string>
+    <string name="label_lon">Długość (Lon)</string>
+    <string name="label_location_name_hint">Nazwa lokalizacji (np. Sektor A)</string>
 
     <!-- History -->
     <string name="history_title">HISTORIA</string>
@@ -64,4 +72,7 @@
     <string name="success_save">Measurements saved successfully</string>
     <string name="save">Zapisz</string>
     <string name="cancel">Anuluj</string>
+    <string name="alarm_location_fetching">Pobieranie Twojej lokalizacji...</string>
+    <string name="alarm_location_no_permission">Brak uprawnień do lokalizacji</string>
+    <string name="alarm_location_format">Lat: %s, Lon: %s</string>
 </resources>

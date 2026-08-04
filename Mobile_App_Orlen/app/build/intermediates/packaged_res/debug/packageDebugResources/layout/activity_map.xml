@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4F7FA"
@@ -132,6 +133,7 @@
             android:layout_height="52dp"
             android:layout_marginTop="22dp"
             android:background="@drawable/bg_button_primary"
+            app:backgroundTint="@null"
             android:text="@string/map_refresh"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
@@ -141,9 +143,10 @@
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/bg_button_secondary"
+            android:background="@drawable/bg_button_primary"
+            app:backgroundTint="@null"
             android:text="@string/btn_back"
-            android:textColor="#0B4F71"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
 
     </LinearLayout>

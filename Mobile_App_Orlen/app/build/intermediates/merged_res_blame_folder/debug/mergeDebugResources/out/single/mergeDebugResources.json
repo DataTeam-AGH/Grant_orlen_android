@@ -1,118 +1,126 @@
 [
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\mipmap-anydpi\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\layout_activity_map.xml.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\layout\\activity_map.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\layout_activity_history.xml.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\layout\\activity_history.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\layout_activity_add_measurement.xml.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\layout\\activity_add_measurement.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\drawable_bg_header.xml.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\drawable\\bg_header.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\layout_activity_map.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\layout\\activity_map.xml"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\drawable_bg_status_ok.xml.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\drawable\\bg_status_ok.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\drawable_bg_header.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\drawable\\bg_header.xml"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\layout_activity_safety_alarm.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\layout\\activity_safety_alarm.xml"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\mipmap-anydpi_ic_launcher.xml.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\mipmap-anydpi\\ic_launcher.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\layout_activity_manual_entry.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\layout\\activity_manual_entry.xml"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\drawable_bg_card.xml.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\drawable\\bg_card.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\layout_activity_alerts.xml.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\layout\\activity_alerts.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\drawable_bg_button_primary.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\drawable\\bg_button_primary.xml"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\drawable_bg_button_secondary.xml.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\drawable\\bg_button_secondary.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\drawable_bg_card.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\drawable\\bg_card.xml"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\xml\\data_extraction_rules.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\drawable\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\drawable_bg_button_warning.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\drawable\\bg_button_warning.xml"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\layout\\activity_main.xml"
+        "merged": "com.example.mobile_app_orlen.app-debug-43:/layout_activity_main.xml.flat",
+        "source": "com.example.mobile_app_orlen.app-main-45:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\drawable_bg_button_warning.xml.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\drawable\\bg_button_warning.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\mipmap-anydpi\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\xml\\backup_rules.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\layout_activity_history.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\layout\\activity_history.xml"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\drawable_bg_button_primary.xml.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\drawable\\bg_button_primary.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\drawable_bg_button_secondary.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\drawable\\bg_button_secondary.xml"
     },
     {
-        "merged": "com.example.mobile_app_orlen.app-debug-40:/layout_activity_safety_alarm.xml.flat",
-        "source": "com.example.mobile_app_orlen.app-main-42:/layout/activity_safety_alarm.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\drawable_bg_status_ok.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\drawable\\bg_status_ok.xml"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\mipmap-anydpi_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\mipmap-anydpi\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\layout_activity_safety_alarm.xml.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\layout\\activity_safety_alarm.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\layout_item_measurement.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\layout\\item_measurement.xml"
     },
     {
-        "merged": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-40:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\cypri\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-42:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\layout_activity_add_measurement.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\layout\\activity_add_measurement.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\layout_activity_alerts.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\layout\\activity_alerts.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-debug-43:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\9.3.1\\com.example.mobile_app_orlen.app-main-45:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     }
 ]

@@ -52,7 +52,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Stężenie Metanu"
+                android:text="@string/label_methane_concentration"
                 android:textColor="#263238"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -78,7 +78,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lokalizacja"
+                android:text="@string/label_location_selection"
                 android:textColor="#263238"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -95,13 +95,13 @@
                     android:id="@+id/rb_gps"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Użyj GPS"
+                    android:text="@string/rb_use_gps"
                     android:checked="true" />
                 <RadioButton
                     android:id="@+id/rb_manual"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Wpisz ręcznie"
+                    android:text="@string/rb_manual_entry"
                     android:layout_marginStart="20dp" />
             </RadioGroup>
 
@@ -114,7 +114,7 @@
                     android:id="@+id/btn_fetch_gps"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Pobierz koordynaty GPS"
+                    android:text="@string/btn_fetch_gps"
                     android:backgroundTint="#0B4F71"
                     android:textColor="#FFFFFF" />
                 <TextView
@@ -137,7 +137,7 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Szerokość (Lat)"
+                    android:hint="@string/label_lat"
                     android:layout_marginBottom="8dp">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_lat"
@@ -149,7 +149,7 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Długość (Lon)">
+                    android:hint="@string/label_lon">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_lon"
                         android:layout_width="match_parent"
@@ -163,7 +163,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:hint="Nazwa lokalizacji (np. Sektor A)">
+                android:hint="@string/label_location_name_hint">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_location_name"
                     android:layout_width="match_parent"

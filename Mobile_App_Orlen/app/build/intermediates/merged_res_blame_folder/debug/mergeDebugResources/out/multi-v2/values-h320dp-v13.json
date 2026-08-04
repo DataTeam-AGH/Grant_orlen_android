@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mobile_app_orlen.app-mergeDebugResources-38:/values-h320dp-v13/values-h320dp-v13.xml",
+            "outputFile": "com.example.mobile_app_orlen.app-mergeDebugResources-41:/values-h320dp-v13/values-h320dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\cypri\\.gradle\\caches\\9.3.1\\transforms\\4f4c161da857059633bdd4b2e16581f5\\workspace\\transformed\\material-1.14.0\\res\\values-h320dp-v13\\values-h320dp-v13.xml",
+                    "source": "C:\\Users\\dell\\.gradle\\caches\\9.3.1\\transforms\\f182ccdd7b7d52801880a0d603da831e\\workspace\\transformed\\material-1.14.0\\res\\values-h320dp-v13\\values-h320dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
