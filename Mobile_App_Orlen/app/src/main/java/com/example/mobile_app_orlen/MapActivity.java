@@ -14,10 +14,14 @@ import android.content.Context;
 
 import com.google.android.gms.location.CurrentLocationRequest;
 
+import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -51,6 +55,7 @@ public class MapActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        EdgeToEdge.enable(this);
         // 1. CAŁKOWITY RESET I NAPRAWA 403
         // UNIKAMY "com.example" - serwery OSM to blokują!
         String myUserAgent = "OrlenGasMonitorSystem/1.2 (cyprian.orlen.project@gmail.com)";
@@ -75,6 +80,11 @@ public class MapActivity extends AppCompatActivity {
         Configuration.getInstance().setOsmdroidTileCache(mapCache);
 
         setContentView(R.layout.activity_map);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
 
         // Inicjalizacja widoków
         tvLatitude = findViewById(R.id.tvLatitude);

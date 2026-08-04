@@ -29,6 +29,11 @@ import com.google.android.gms.location.Priority;
 import java.util.Locale;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -61,6 +66,11 @@ public class SafetyAlarmActivity extends Activity {
         getWindow().setAttributes(params);
 
         setContentView(R.layout.activity_safety_alarm);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
 
         tvCurrentLocation = findViewById(R.id.tvCurrentLocation);
         tvWeatherAlarm = findViewById(R.id.tvWeatherAlarm);
