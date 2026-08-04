@@ -1,8 +1,0 @@
-com.example.mobile_app_orlen.app-pngs-0 C:\Users\dell\Desktop\grant_orlen\Grant_orlen_android\Mobile_App_Orlen\app\build\generated\res\pngs\debug
-com.example.mobile_app_orlen.app-resValues-1 C:\Users\dell\Desktop\grant_orlen\Grant_orlen_android\Mobile_App_Orlen\app\build\generated\res\resValues\debug
-com.example.mobile_app_orlen.app-updated_navigation_xml-2 C:\Users\dell\Desktop\grant_orlen\Grant_orlen_android\Mobile_App_Orlen\app\build\generated\updated_navigation_xml\debug
-com.example.mobile_app_orlen.app-packageDebugResources-3 C:\Users\dell\Desktop\grant_orlen\Grant_orlen_android\Mobile_App_Orlen\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.mobile_app_orlen.app-packageDebugResources-4 C:\Users\dell\Desktop\grant_orlen\Grant_orlen_android\Mobile_App_Orlen\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.mobile_app_orlen.app-debug-5 C:\Users\dell\Desktop\grant_orlen\Grant_orlen_android\Mobile_App_Orlen\app\build\intermediates\merged_res\debug\mergeDebugResources
-com.example.mobile_app_orlen.app-debug-6 C:\Users\dell\Desktop\grant_orlen\Grant_orlen_android\Mobile_App_Orlen\app\src\debug\res
-com.example.mobile_app_orlen.app-main-7 C:\Users\dell\Desktop\grant_orlen\Grant_orlen_android\Mobile_App_Orlen\app\src\main\res
