@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {Measurement.class}, version = 1, exportSchema = false)
+@Database(entities = {Measurement.class}, version = 2, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     public abstract MeasurementDao measurementDao();
@@ -25,6 +25,7 @@ public abstract class AppDatabase extends RoomDatabase {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                                     AppDatabase.class, "measurement_database")
+                            .fallbackToDestructiveMigration()
                             .build();
                 }
             }
