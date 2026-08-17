@@ -38,7 +38,7 @@
                 android:background="@drawable/bg_status_ok"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="4dp"
-                android:text="OK"
+                android:text="SAFE"
                 android:textColor="#FFFFFF"
                 android:textSize="11sp"
                 android:textStyle="bold" />
@@ -50,9 +50,20 @@
             android:layout_marginVertical="12dp"
             android:background="#ECEFF1" />
 
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lokalizacja: Kraków"
+            android:textColor="#607D8B"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            tools:text="Lokalizacja: Kraków" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -71,7 +82,7 @@
                 android:textColor="#263238"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                tools:text="0.1 %" />
+                tools:text="CH4: 0.1 %" />
         </LinearLayout>
 
     </LinearLayout>

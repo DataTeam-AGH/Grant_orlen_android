@@ -12,12 +12,27 @@ public class Measurement {
     public long timestamp;
     public boolean isAnomaly;
     public String notes;
+    public double latitude;
+    public double longitude;
+    public String locationName;
 
-    public Measurement(String userId, double ch4Value, long timestamp, boolean isAnomaly, String notes) {
+    public Measurement(
+            String userId,
+            double ch4Value,
+            long timestamp,
+            boolean isAnomaly,
+            String notes,
+            double latitude,
+            double longitude,
+            String locationName
+    ) {
         this.userId = userId;
         this.ch4Value = ch4Value;
         this.timestamp = timestamp;
         this.isAnomaly = isAnomaly;
         this.notes = notes;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.locationName = locationName;
     }
 }

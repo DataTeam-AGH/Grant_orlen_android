@@ -26,9 +26,12 @@ import com.example.mobile_app_orlen.data.model;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Date;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
 
 public class HistoryActivity extends AppCompatActivity {
 
@@ -40,6 +43,7 @@ public class HistoryActivity extends AppCompatActivity {
     private EditText etMaxConcentration;
 
     private Spinner spStatus;
+    private Spinner spLocation;
 
     private Button btnApplyFilters;
     private Button btnClearFilters;
@@ -84,6 +88,7 @@ public class HistoryActivity extends AppCompatActivity {
         etMaxConcentration = findViewById(R.id.etMaxConcentration);
 
         spStatus = findViewById(R.id.spStatus);
+        spLocation = findViewById(R.id.spLocation);
 
         btnApplyFilters = findViewById(R.id.btnApplyFilters);
         btnClearFilters = findViewById(R.id.btnClearFilters);
@@ -114,6 +119,8 @@ public class HistoryActivity extends AppCompatActivity {
                 currentMeasurements = measurements;
             }
 
+            setupLocationSpinner();
+
             applyFilters(
                     currentMeasurements,
                     rvHistory
@@ -133,6 +140,7 @@ public class HistoryActivity extends AppCompatActivity {
             etMaxConcentration.setText("");
 
             spStatus.setSelection(0);
+            spLocation.setSelection(0);
 
             dateFrom = null;
             dateTo = null;
@@ -170,6 +178,65 @@ public class HistoryActivity extends AppCompatActivity {
         );
 
         spStatus.setAdapter(statusAdapter);
+    }
+
+    private void setupLocationSpinner() {
+
+        String previousSelection = null;
+
+        if (spLocation.getSelectedItem() != null) {
+            previousSelection =
+                    spLocation.getSelectedItem().toString();
+        }
+
+        Set<String> uniqueLocations = new LinkedHashSet<>();
+
+        for (Measurement measurement : currentMeasurements) {
+            if (measurement.locationName != null
+                    && !measurement.locationName.trim().isEmpty()) {
+
+                uniqueLocations.add(
+                        measurement.locationName.trim()
+                );
+            }
+        }
+
+        List<String> locations =
+                new ArrayList<>(uniqueLocations);
+
+        Collections.sort(
+                locations,
+                String.CASE_INSENSITIVE_ORDER
+        );
+
+        locations.add(0, "Wszystkie");
+
+        ArrayAdapter<String> locationAdapter =
+                new ArrayAdapter<>(
+                        this,
+                        android.R.layout.simple_spinner_item,
+                        locations
+                );
+
+        locationAdapter.setDropDownViewResource(
+                android.R.layout.simple_spinner_dropdown_item
+        );
+
+        spLocation.setAdapter(locationAdapter);
+
+        if (previousSelection != null) {
+            int position = locationAdapter.getPosition(
+                    previousSelection
+            );
+
+            if (position >= 0) {
+                spLocation.setSelection(position);
+            } else {
+                spLocation.setSelection(0);
+            }
+        } else {
+            spLocation.setSelection(0);
+        }
     }
 
     private void setupFilterPanel() {
@@ -312,7 +379,6 @@ public class HistoryActivity extends AppCompatActivity {
                 max = Double.parseDouble(
                         maxText.replace(",", ".")
                 );
-
             }
 
         } catch (NumberFormatException e) {
@@ -338,31 +404,50 @@ public class HistoryActivity extends AppCompatActivity {
         }
 
         String selectedStatus =
-                spStatus.getSelectedItem().toString();
+                spStatus.getSelectedItem() != null
+                        ? spStatus.getSelectedItem().toString()
+                        : "Wszystkie";
+
+        String selectedLocation =
+                spLocation.getSelectedItem() != null
+                        ? spLocation.getSelectedItem().toString()
+                        : "Wszystkie";
 
         List<Measurement> filtered =
                 new ArrayList<>();
 
         for (Measurement measurement : measurements) {
 
-            if (dateFrom != null &&
-                    measurement.timestamp < dateFrom) {
+            if (dateFrom != null
+                    && measurement.timestamp < dateFrom) {
                 continue;
             }
 
-            if (dateTo != null &&
-                    measurement.timestamp > dateTo) {
+            if (dateTo != null
+                    && measurement.timestamp > dateTo) {
                 continue;
             }
 
-            if (min != null &&
-                    measurement.ch4Value < min) {
+            if (min != null
+                    && measurement.ch4Value < min) {
                 continue;
             }
 
-            if (max != null &&
-                    measurement.ch4Value > max) {
+            if (max != null
+                    && measurement.ch4Value > max) {
                 continue;
+            }
+
+            if (!selectedLocation.equals("Wszystkie")) {
+
+                String locationName =
+                        measurement.locationName != null
+                                ? measurement.locationName.trim()
+                                : "";
+
+                if (!locationName.equals(selectedLocation)) {
+                    continue;
+                }
             }
 
             model.SafetyLevel level =
@@ -383,6 +468,8 @@ public class HistoryActivity extends AppCompatActivity {
                             + measurement.timestamp
                             + " "
                             + measurement.notes
+                            + " "
+                            + measurement.locationName
                             + " "
                             + searchDateFormat.format(
                             new Date(measurement.timestamp)

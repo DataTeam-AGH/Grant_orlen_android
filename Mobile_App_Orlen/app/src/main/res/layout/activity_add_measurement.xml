@@ -13,7 +13,6 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- Nagłówek -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,7 +39,6 @@
                 android:textSize="14sp" />
         </LinearLayout>
 
-        <!-- Karta wprowadzania danych -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,6 +61,90 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
+                    android:textColor="#263238" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnGetLocation"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_button_primary"
+                app:backgroundTint="@null"
+                android:text="Pobierz lokalizację GPS"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_location_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Lokalizacja: nie ustawiono"
+                android:textColor="#455A64"
+                android:textSize="14sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_location_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:hint="Nazwa lokalizacji"
+                app:boxStrokeColor="#0B4F71"
+                app:hintTextColor="#0B4F71">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_location_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#263238" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_manual_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Lub wpisz współrzędne ręcznie"
+                android:textColor="#0B4F71"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_latitude"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Szerokość geograficzna"
+                app:boxStrokeColor="#0B4F71"
+                app:hintTextColor="#0B4F71">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_latitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:textColor="#263238" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_longitude"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Długość geograficzna"
+                app:boxStrokeColor="#0B4F71"
+                app:hintTextColor="#0B4F71">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_longitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
                     android:textColor="#263238" />
             </com.google.android.material.textfield.TextInputLayout>
 
