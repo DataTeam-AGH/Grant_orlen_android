@@ -17,6 +17,7 @@ import com.example.mobile_app_orlen.data.model;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.TimeZone;
 
 public class MeasurementAdapter
         extends ListAdapter<Measurement, MeasurementAdapter.MeasurementViewHolder> {
@@ -89,11 +90,7 @@ public class MeasurementAdapter
         private final TextView tvStatus;
         private final TextView tvLocation;
 
-        private final SimpleDateFormat dateFormat =
-                new SimpleDateFormat(
-                        "yyyy-MM-dd HH:mm",
-                        Locale.getDefault()
-                );
+        private final SimpleDateFormat dateFormat;
 
         public MeasurementViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -102,6 +99,15 @@ public class MeasurementAdapter
             tvCh4 = itemView.findViewById(R.id.tvCh4);
             tvStatus = itemView.findViewById(R.id.tvStatus);
             tvLocation = itemView.findViewById(R.id.tvLocation);
+
+            dateFormat = new SimpleDateFormat(
+                    "yyyy-MM-dd HH:mm",
+                    Locale.getDefault()
+            );
+
+            dateFormat.setTimeZone(
+                    TimeZone.getTimeZone("Europe/Warsaw")
+            );
         }
 
         public void bind(Measurement measurement) {

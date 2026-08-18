@@ -1,5 +1,6 @@
 package com.example.mobile_app_orlen;
 
+import java.util.TimeZone;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
@@ -65,7 +66,15 @@ public class HistoryActivity extends AppCompatActivity {
             new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
 
     private final SimpleDateFormat searchDateFormat =
-            new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
+            new SimpleDateFormat(
+                    "yyyy-MM-dd HH:mm",
+                    Locale.getDefault()
+            );
+    {
+        searchDateFormat.setTimeZone(
+                TimeZone.getTimeZone("Europe/Warsaw")
+        );
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
