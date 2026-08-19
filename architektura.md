@@ -84,34 +84,6 @@ Główny ekran nawigacyjny powinien pozwolić użytkownikowi na dostęp do:
 - Analityki,
 - Ustawień.
 
-# 4. Role i użytkownicy (interakcja, uprawnienia, moduły)
-
-## Użytkownik zwykły (Standard User) - jest to pracownik fizyczny obecny na stacji wydobywczej, który wykonuje obchody i bezpośrednio bada teren.
-
-Użytkownik ma dostęp do: 
-- Dashboard: widzi obecne stężenie w swoim/ustalonym punkcie oraz wyłączenie skróty do funkcji terenowych.
-- Nowy pomiar: ma pełny dostęp do wprowadzania oraz zapisu nowych pomiarów. Może dodać stężenia, aby sprawdzić stan procesu wydobywczego.
-- Historia pomiarów: użytkownik widzi listę i szczegóły pomiarów, ale tylko swoich, lub z przypisanych mu aktualnie stacji. Może filtrować dane po dacie. 
-- Alerty: po wprowadzaniu danych użytkownik dostaje powiadomienie o tym, czy jest niebezpieczeństwo.
-- Procedury bezpieczeństwa: użytkownik ma pełny dostęp do odczytu checklisty ratunkowej. System automatycznie go tu przekieruje, jeśli po wprowadzeniu danych wykaże niebezpieczeństwo.
-- Analiza: Użytkownik widzi wykresy stężenia, trendy pomiarów oraz ich predykcje.
-
-## Inspektor/Audytor: osoba powołana do kontroli emisji i wycieków.
-
-Inspektor ma dostęp do:
-- Historia pomiarów: Może przeglądać i filtrować bazę danych w celu weryfikacji, kiedy, gdzie oraz ile razy dochodziło do przekroczeń norm.
-- Alerty: Może przeglądać rejestr dawnych niebezpiecznych zdarzeń oraz sprawdzać czas reakcji systemu.
-- Analiza: Przegląda heatmapy rozprzestrzeniania się gazu, wykresy korelacji z pogodą, stany archiwalne na mapie, stąd może ocenić wpływ na środowisko.
-- Procedury bezpieczeństwa: weryfikuje, czy instrukcje w aplikacji są aktualne i zgodne z prawem.
-	
-## Administracja systemu: Osoba odpowiedzialna za stronę techniczną, z zespołu deweloperski. 
-
-Administrator systemu ma dostęp do:
-- Ustawienia: posiada pełne zarządzanie konfiguracją aplikacji, kluczami API oraz zarządzanie bazą danych.
-- Analiza/Model ML: monitoruje poprawność działania wbudowanego modelu klasyfikacji binarnej (Bezpieczeństwo/Niebezpieczeństwo) oraz modelu predykcyjnego. Monitoruje poprawność wykresów. 
-- Procedury bezpieczeństwa: Może edytować (dodawać/usuwać kroki) instrukcje według zleceń od inspektora.
-
-
 # 5. Specyfikacja Architektury Funkcjonalnej Systemu Monitoringu
 
 Architektura aplikacji została zaprojektowana w modelu wielowarstwowym, ze szczególnym uwzględnieniem separacji logiki biznesowej, akwizycji danych oraz inferencji modeli uczenia maszynowego. System operuje na asynchronicznym przepływie zdarzeń i składa się z czterech głównych modułów.
