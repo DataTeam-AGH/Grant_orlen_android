@@ -301,33 +301,21 @@ public class MainActivity extends AppCompatActivity {
 
             String weatherText = String.format(
                     Locale.US,
-                    "Temp: %.1f°C | Wilgotność: %d%% | Wiatr: %.1f m/s (%s)",
+                    "Temp: %.1f°C | Wilgotność: %d%% | Ciśnienie: %d hPa | Wiatr: %.1f m/s (%s)",
                     weather.main.temp,
                     weather.main.humidity,
+                    weather.main.pressure,
                     weather.wind.speed,
                     direction
             );
 
             tvWeather.setText(weatherText);
 
-            String shortDir = "N/A";
-
-            int start = direction.indexOf("(");
-            int end = direction.indexOf(")");
-
-            if (start != -1 && end != -1) {
-                shortDir =
-                        direction.substring(
-                                start + 1,
-                                end
-                        );
-            }
-
             String windTextAlarm = String.format(
                     Locale.US,
                     "WIATR: %.1f m/s (%s)",
                     weather.wind.speed,
-                    shortDir
+                    direction
             );
 
             getSharedPreferences(
@@ -351,38 +339,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String getWindDirection(int deg) {
-        if (deg >= 337.5 || deg < 22.5) {
-            return "Północny (N)";
-        }
-
-        if (deg >= 22.5 && deg < 67.5) {
-            return "Północno-Wschodni (NE)";
-        }
-
-        if (deg >= 67.5 && deg < 112.5) {
-            return "Wschodni (E)";
-        }
-
-        if (deg >= 112.5 && deg < 157.5) {
-            return "Południowo-Wschodni (SE)";
-        }
-
-        if (deg >= 157.5 && deg < 202.5) {
-            return "Południowy (S)";
-        }
-
-        if (deg >= 202.5 && deg < 247.5) {
-            return "Południowo-Zachodni (SW)";
-        }
-
-        if (deg >= 247.5 && deg < 292.5) {
-            return "Zachodni (W)";
-        }
-
-        if (deg >= 292.5 && deg < 337.5) {
-            return "Północno-Zachodni (NW)";
-        }
-
+        if (deg >= 337.5 || deg < 22.5) return "N";
+        if (deg >= 22.5 && deg < 67.5) return "NE";
+        if (deg >= 67.5 && deg < 112.5) return "E";
+        if (deg >= 112.5 && deg < 157.5) return "SE";
+        if (deg >= 157.5 && deg < 202.5) return "S";
+        if (deg >= 202.5 && deg < 247.5) return "SW";
+        if (deg >= 247.5 && deg < 292.5) return "W";
+        if (deg >= 292.5 && deg < 337.5) return "NW";
         return "N/A";
     }
 

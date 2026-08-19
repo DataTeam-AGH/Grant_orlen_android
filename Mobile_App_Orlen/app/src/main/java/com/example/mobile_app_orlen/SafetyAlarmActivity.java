@@ -283,14 +283,14 @@ public class SafetyAlarmActivity extends Activity {
             tvWeatherAlarm.setText(windText);
 
             // Przygotuj pełny tekst dla MainActivity, aby dane były spójne
-            String fullDir = getWindDirectionFull(weather.wind.deg);
             String weatherText = String.format(
                     Locale.US,
-                    "Temp: %.1f°C | Wilgotność: %d%% | Wiatr: %.1f m/s (%s)",
+                    "Temp: %.1f°C | Wilgotność: %d%% | Ciśnienie: %d hPa | Wiatr: %.1f m/s (%s)",
                     weather.main.temp,
                     weather.main.humidity,
+                    weather.main.pressure,
                     weather.wind.speed,
-                    fullDir
+                    dir
             );
 
             // Współdzielimy cache z MainActivity - aktualizujemy oba pola
@@ -300,18 +300,6 @@ public class SafetyAlarmActivity extends Activity {
                     .putString("last_weather_text", weatherText)
                     .apply();
         }
-    }
-
-    private String getWindDirectionFull(int deg) {
-        if (deg >= 337.5 || deg < 22.5) return "Północny (N)";
-        if (deg >= 22.5 && deg < 67.5) return "Północno-Wschodni (NE)";
-        if (deg >= 67.5 && deg < 112.5) return "Wschodni (E)";
-        if (deg >= 112.5 && deg < 157.5) return "Południowo-Wschodni (SE)";
-        if (deg >= 157.5 && deg < 202.5) return "Południowy (S)";
-        if (deg >= 202.5 && deg < 247.5) return "Południowo-Zachodni (SW)";
-        if (deg >= 247.5 && deg < 292.5) return "Zachodni (W)";
-        if (deg >= 292.5 && deg < 337.5) return "Północno-Zachodni (NW)";
-        return "N/A";
     }
 
     private String getWindDirection(int deg) {

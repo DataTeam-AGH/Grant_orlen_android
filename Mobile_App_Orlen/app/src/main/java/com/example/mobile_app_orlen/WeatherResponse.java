@@ -15,6 +15,9 @@ public class WeatherResponse {
         
         @SerializedName("humidity")
         public int humidity;
+
+        @SerializedName("pressure")
+        public int pressure;
     }
 
     public static class Wind {
