@@ -64,10 +64,14 @@ public class MainActivity extends AppCompatActivity {
     private static final String WEATHER_API_KEY = "c6ebc42aeaf95f82074837ad9ea223e9";
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1001;
 
-    private long lastWeatherFetchTime = 0;
-
     private double currentMethaneConcentration = 0.0;
     private boolean userIsNearStation = true;
+
+    // Zmienne do przechowywania aktualnych warunków pogodowych dla modelu rozmytego
+    private double currentTemp = 20.0;
+    private double currentPress = 1013.0;
+    private double currentHum = 50.0;
+    private double currentWind = 1.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -295,6 +299,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateWeatherUi(WeatherResponse weather) {
         if (tvWeather != null) {
+            currentTemp = weather.main.temp;
+            currentPress = weather.main.pressure;
+            currentHum = weather.main.humidity;
+            currentWind = weather.wind.speed;
+
             String direction = getWindDirection(
                     weather.wind.deg
             );
@@ -335,6 +344,9 @@ public class MainActivity extends AppCompatActivity {
                             windTextAlarm
                     )
                     .apply();
+
+            // Odśwież status, bo zmieniły się warunki dla modelu fuzzy
+            updateSystemStatus(currentMethaneConcentration);
         }
     }
 
@@ -531,29 +543,18 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateSystemStatus(double value) {
         if (tvSystemStatus != null) {
-
-            model.SafetyLevel level =
-                    model.getMethaneSafetyLevel(value);
-
-            tvSystemStatus.setText(
-                    model.getStatusMessage(level)
+            // Obliczanie poziomu bezpieczeństwa za pomocą logiki rozmytej
+            model.FuzzyResult fuzzy = model.calculateFuzzySafety(
+                    value,
+                    currentTemp,
+                    currentPress,
+                    currentHum,
+                    currentWind
             );
 
-            int color;
+            tvSystemStatus.setText(fuzzy.message);
 
-            switch (level) {
-                case ALERT:
-                    color = Color.parseColor("#F44336");
-                    break;
-
-                case WARNING:
-                    color = Color.parseColor("#FFC107");
-                    break;
-
-                default:
-                    color = Color.parseColor("#4CAF50");
-                    break;
-            }
+            int color = getSafetyColor(fuzzy.level);
 
             tvSystemStatus.setBackgroundTintList(
                     ColorStateList.valueOf(color)
@@ -570,39 +571,42 @@ public class MainActivity extends AppCompatActivity {
             textView.setText(
                     String.format(
                             Locale.getDefault(),
-                            "%.1f %%",
+                            "%.1f %% LEL",
                             value
                     )
             );
         }
 
         if (progressBar != null) {
-
             progressBar.setMax(100);
             progressBar.setProgress((int) value);
 
-            model.SafetyLevel level =
-                    model.getMethaneSafetyLevel(value);
+            // Wykorzystujemy model rozmyty do koloru paska postępu
+            model.FuzzyResult fuzzy = model.calculateFuzzySafety(
+                    value,
+                    currentTemp,
+                    currentPress,
+                    currentHum,
+                    currentWind
+            );
 
-            int color;
-
-            switch (level) {
-                case ALERT:
-                    color = Color.parseColor("#F44336");
-                    break;
-
-                case WARNING:
-                    color = Color.parseColor("#FFC107");
-                    break;
-
-                default:
-                    color = Color.parseColor("#4CAF50");
-                    break;
-            }
+            int color = getSafetyColor(fuzzy.level);
 
             progressBar.setProgressTintList(
                     ColorStateList.valueOf(color)
             );
+        }
+    }
+
+    private int getSafetyColor(model.SafetyLevel level) {
+        switch (level) {
+            case ALERT:
+                return Color.parseColor("#F44336");
+            case WARNING:
+                return Color.parseColor("#FFC107");
+            case SAFE:
+            default:
+                return Color.parseColor("#4CAF50");
         }
     }
 
@@ -673,7 +677,7 @@ public class MainActivity extends AppCompatActivity {
             );
             intent.putExtra(
                     "stationName",
-                    "Kraków Północ"
+                    "Pomiar bieżący"
             );
 
             startActivity(intent);
