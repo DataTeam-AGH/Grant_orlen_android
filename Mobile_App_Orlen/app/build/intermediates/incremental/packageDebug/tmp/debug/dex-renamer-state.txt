@@ -1,9 +1,9 @@
-#Tue Jul 28 20:52:41 CEST 2026
-base.0=C\:\\Users\\cypri\\OneDrive\\Pulpit\\Grant_orlen_android5\\Mobile_App_Orlen\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\cypri\\OneDrive\\Pulpit\\Grant_orlen_android5\\Mobile_App_Orlen\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\cypri\\OneDrive\\Pulpit\\Grant_orlen_android5\\Mobile_App_Orlen\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
-base.3=C\:\\Users\\cypri\\OneDrive\\Pulpit\\Grant_orlen_android5\\Mobile_App_Orlen\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
-base.4=C\:\\Users\\cypri\\OneDrive\\Pulpit\\Grant_orlen_android5\\Mobile_App_Orlen\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+#Wed Aug 19 19:03:07 CEST 2026
+base.0=C\:\\Users\\knute\\AndroidStudioProjects\\Grant_orlen_android\\Mobile_App_Orlen\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\knute\\AndroidStudioProjects\\Grant_orlen_android\\Mobile_App_Orlen\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\knute\\AndroidStudioProjects\\Grant_orlen_android\\Mobile_App_Orlen\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+base.3=C\:\\Users\\knute\\AndroidStudioProjects\\Grant_orlen_android\\Mobile_App_Orlen\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+base.4=C\:\\Users\\knute\\AndroidStudioProjects\\Grant_orlen_android\\Mobile_App_Orlen\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=1/classes.dex
