@@ -3,6 +3,8 @@ package com.example.mobile_app_orlen;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
@@ -20,6 +22,12 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class AddMeasurementActivity extends AppCompatActivity {
 
     private static final int LOCATION_PERMISSION_REQUEST = 1001;
@@ -33,6 +41,9 @@ public class AddMeasurementActivity extends AppCompatActivity {
     private android.widget.TextView tvLocationStatus;
 
     private FusedLocationProviderClient fusedLocationClient;
+
+    private final ExecutorService geocoderExecutor =
+            Executors.newSingleThreadExecutor();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +96,11 @@ public class AddMeasurementActivity extends AppCompatActivity {
                 try {
                     latitude = Double.parseDouble(latitudeText);
                 } catch (NumberFormatException e) {
-                    Toast.makeText(this, "Nieprawidłowa szerokość geograficzna", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(
+                            this,
+                            "Nieprawidłowa szerokość geograficzna",
+                            Toast.LENGTH_SHORT
+                    ).show();
                     return;
                 }
             }
@@ -94,18 +109,30 @@ public class AddMeasurementActivity extends AppCompatActivity {
                 try {
                     longitude = Double.parseDouble(longitudeText);
                 } catch (NumberFormatException e) {
-                    Toast.makeText(this, "Nieprawidłowa długość geograficzna", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(
+                            this,
+                            "Nieprawidłowa długość geograficzna",
+                            Toast.LENGTH_SHORT
+                    ).show();
                     return;
                 }
             }
 
             if (latitude < -90 || latitude > 90) {
-                Toast.makeText(this, "Szerokość musi być w zakresie -90 do 90", Toast.LENGTH_SHORT).show();
+                Toast.makeText(
+                        this,
+                        "Szerokość musi być w zakresie -90 do 90",
+                        Toast.LENGTH_SHORT
+                ).show();
                 return;
             }
 
             if (longitude < -180 || longitude > 180) {
-                Toast.makeText(this, "Długość musi być w zakresie -180 do 180", Toast.LENGTH_SHORT).show();
+                Toast.makeText(
+                        this,
+                        "Długość musi być w zakresie -180 do 180",
+                        Toast.LENGTH_SHORT
+                ).show();
                 return;
             }
 
@@ -124,7 +151,11 @@ public class AddMeasurementActivity extends AppCompatActivity {
 
             switch (status) {
                 case "SUCCESS":
-                    Toast.makeText(this, R.string.success_save, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(
+                            this,
+                            R.string.success_save,
+                            Toast.LENGTH_SHORT
+                    ).show();
 
                     String ch4Str = etCh4.getText() != null
                             ? etCh4.getText().toString()
@@ -168,10 +199,14 @@ public class AddMeasurementActivity extends AppCompatActivity {
     }
 
     private void getCurrentLocation() {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED
-                && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACCESS_FINE_LOCATION
+        ) != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+        ) != PackageManager.PERMISSION_GRANTED) {
 
             ActivityCompat.requestPermissions(
                     this,
@@ -207,6 +242,79 @@ public class AddMeasurementActivity extends AppCompatActivity {
                             ", " +
                             longitude
             );
+
+            getCityFromCoordinates(latitude, longitude);
+        });
+    }
+
+    private void getCityFromCoordinates(double latitude, double longitude) {
+        if (!Geocoder.isPresent()) {
+            tvLocationStatus.setText(
+                    "GPS pobrany, ale rozpoznawanie miasta jest niedostępne"
+            );
+            return;
+        }
+
+        tvLocationStatus.setText(
+                "GPS pobrany. Rozpoznawanie miasta..."
+        );
+
+        geocoderExecutor.execute(() -> {
+            Geocoder geocoder = new Geocoder(
+                    this,
+                    Locale.getDefault()
+            );
+
+            try {
+                List<Address> addresses = geocoder.getFromLocation(
+                        latitude,
+                        longitude,
+                        1
+                );
+
+                runOnUiThread(() -> {
+                    if (addresses == null || addresses.isEmpty()) {
+                        tvLocationStatus.setText(
+                                "GPS pobrany, ale nie znaleziono miasta"
+                        );
+                        return;
+                    }
+
+                    Address address = addresses.get(0);
+
+                    String city = address.getLocality();
+
+                    if (city == null || city.trim().isEmpty()) {
+                        city = address.getSubAdminArea();
+                    }
+
+                    if (city == null || city.trim().isEmpty()) {
+                        city = address.getAdminArea();
+                    }
+
+                    if (city == null || city.trim().isEmpty()) {
+                        tvLocationStatus.setText(
+                                "GPS pobrany, ale nie znaleziono miasta"
+                        );
+                        return;
+                    }
+
+                    city = city.trim();
+
+                    etLocationName.setText(city);
+
+                    tvLocationStatus.setText(
+                            "Lokalizacja: " + city
+                    );
+                });
+
+            } catch (IOException e) {
+                runOnUiThread(() ->
+                        tvLocationStatus.setText(
+                                "GPS pobrany, ale nie udało się rozpoznać miasta"
+                        )
+                );
+            }
         });
     }
 
@@ -216,7 +324,11 @@ public class AddMeasurementActivity extends AppCompatActivity {
             String[] permissions,
             int[] grantResults
     ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        super.onRequestPermissionsResult(
+                requestCode,
+                permissions,
+                grantResults
+        );
 
         if (requestCode == LOCATION_PERMISSION_REQUEST) {
             if (grantResults.length > 0
@@ -230,5 +342,11 @@ public class AddMeasurementActivity extends AppCompatActivity {
                 ).show();
             }
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        geocoderExecutor.shutdown();
     }
 }
