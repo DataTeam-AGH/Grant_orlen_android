@@ -49,6 +49,8 @@ public class SafetyAlarmActivity extends Activity {
     private TextView tvCurrentLocation;
     private TextView tvWeatherAlarm;
     private WeatherService weatherService;
+    private EmailApiService emailApiService;
+    private boolean isEmailSent = false;
     private static final String WEATHER_API_KEY = "c6ebc42aeaf95f82074837ad9ea223e9";
 
     @Override
@@ -77,6 +79,7 @@ public class SafetyAlarmActivity extends Activity {
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
         initWeatherService();
+        initEmailApiService();
 
         locationCallback = new LocationCallback() {
             @Override
@@ -187,7 +190,6 @@ public class SafetyAlarmActivity extends Activity {
             ActivityCompat.requestPermissions(this, 
                     new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, 
                     1001);
-            tvCurrentLocation.setText(getString(R.string.gps_no_permission));
             return;
         }
 
@@ -209,14 +211,28 @@ public class SafetyAlarmActivity extends Activity {
             fusedLocationClient.requestLocationUpdates(locationRequest, locationCallback, Looper.getMainLooper());
             
         } catch (SecurityException e) {
-            tvCurrentLocation.setText(getString(R.string.alarm_location_no_permission));
+            // Brak uprawnień do lokalizacji (ukryte)
         }
     }
 
     private void updateLocationUi(android.location.Location location) {
         String latDms = convertToDms(location.getLatitude(), true);
         String lngDms = convertToDms(location.getLongitude(), false);
-        tvCurrentLocation.setText(getString(R.string.alarm_location_format, latDms, lngDms));
+        String locationString = getString(R.string.alarm_location_format, latDms, lngDms);
+        
+        // Wywołujemy wysyłanie e-maila tutaj, mając dostępną lokalizację GPS
+        // Dodano zabezpieczenie: wysyłamy tylko raz!
+        if (!isEmailSent) {
+            isEmailSent = true;
+            String gasName = getIntent().getStringExtra("gasName");
+            String stationName = getIntent().getStringExtra("stationName");
+            double concentration = getIntent().getDoubleExtra("concentration", 12.4);
+            
+            if (gasName == null) gasName = "Metan";
+            if (stationName == null) stationName = "Kraków Północ";
+            
+            sendAlertEmail(gasName, stationName, concentration, locationString);
+        }
     }
 
     private String convertToDms(double coordinate, boolean isLatitude) {
@@ -235,6 +251,41 @@ public class SafetyAlarmActivity extends Activity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         weatherService = retrofit.create(WeatherService.class);
+    }
+
+    private void initEmailApiService() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://formspree.io/") 
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        emailApiService = retrofit.create(EmailApiService.class);
+    }
+
+    private void sendAlertEmail(String gasName, String stationName, double concentration, String location) {
+        String subject = "UWAGA: ALARM ZAGROŻENIA - " + stationName;
+        String body = "Wykryto zagrożenie!\n\n" +
+                "Gaz: " + gasName + "\n" +
+                "Stężenie: " + concentration + "%\n" +
+                "Stacja: " + stationName + "\n" +
+                "Lokalizacja urządzenia: " + location;
+        
+        EmailRequest request = new EmailRequest("datateam@agh.ed.pl", subject, body);
+
+        emailApiService.sendEmail(request).enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if (response.isSuccessful()) {
+                    android.util.Log.d("EmailAPI", "Powiadomienie email wysłane pomyślnie.");
+                } else {
+                    android.util.Log.e("EmailAPI", "Błąd wysyłania email: Kod " + response.code());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                android.util.Log.e("EmailAPI", "Błąd sieci podczas wysyłania email", t);
+            }
+        });
     }
 
     private void getWeatherForLocation(double lat, double lon) {
