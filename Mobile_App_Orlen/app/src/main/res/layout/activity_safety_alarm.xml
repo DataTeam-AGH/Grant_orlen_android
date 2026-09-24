@@ -51,7 +51,7 @@
             android:layout_marginTop="14dp"
             android:gravity="center"
             android:lineSpacingExtra="3dp"
-            android:text="Gaz: Metan&#10;Stężenie: 12,4%&#10;Poziom zagrożenia: WYSOKI"
+            android:text="Gaz: Metan&#10;Poziom zagrożenia: WYSOKI"
             android:textColor="#FFFFFF"
             android:textSize="15sp" />
 

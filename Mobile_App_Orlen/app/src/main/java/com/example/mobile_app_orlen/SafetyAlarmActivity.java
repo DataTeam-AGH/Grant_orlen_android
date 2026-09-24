@@ -142,7 +142,6 @@ public class SafetyAlarmActivity extends Activity {
 
         String details =
                 "Gaz: " + gasName +
-                        "\nStężenie: " + concentration + "%" +
                         "\nPoziom zagrożenia: WYSOKI";
 
         tvAlarmDetails.setText(details);
@@ -272,7 +271,6 @@ public class SafetyAlarmActivity extends Activity {
         String subject = "UWAGA: ALARM ZAGROŻENIA - " + stationName;
         String body = "Wykryto zagrożenie!\n\n" +
                 "Gaz: " + gasName + "\n" +
-                "Stężenie: " + concentration + "%\n" +
                 "Stacja: " + stationName + "\n" +
                 "Lokalizacja urządzenia: " + location;
         
