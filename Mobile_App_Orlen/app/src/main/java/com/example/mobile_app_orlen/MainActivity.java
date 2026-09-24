@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnNewMeasurement;
     private Button btnHistory;
-    private Button btnMap;
     private Button btnAlerts;
 
     private FusedLocationProviderClient fusedLocationClient;
@@ -373,7 +372,6 @@ public class MainActivity extends AppCompatActivity {
 
         btnNewMeasurement = findViewById(R.id.btnNewMeasurement);
         btnHistory = findViewById(R.id.btnHistory);
-        btnMap = findViewById(R.id.btnMap);
         btnAlerts = findViewById(R.id.btnAlerts);
     }
 
@@ -628,17 +626,6 @@ public class MainActivity extends AppCompatActivity {
                         new Intent(
                                 MainActivity.this,
                                 HistoryActivity.class
-                        )
-                );
-            });
-        }
-
-        if (btnMap != null) {
-            btnMap.setOnClickListener(v -> {
-                startActivity(
-                        new Intent(
-                                MainActivity.this,
-                                MapActivity.class
                         )
                 );
             });

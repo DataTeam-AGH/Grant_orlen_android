@@ -2,6 +2,8 @@ package com.example.mobile_app_orlen;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,7 +15,14 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.Priority;
 import com.google.android.material.textfield.TextInputEditText;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class ManualEntryActivity extends AppCompatActivity {
 
@@ -29,6 +38,9 @@ public class ManualEntryActivity extends AppCompatActivity {
     private TextView tvLocationStatus;
 
     private FusedLocationProviderClient fusedLocationClient;
+
+    private final ExecutorService geocoderExecutor =
+            Executors.newSingleThreadExecutor();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -180,30 +192,70 @@ public class ManualEntryActivity extends AppCompatActivity {
             return;
         }
 
-        fusedLocationClient.getLastLocation()
+        tvLocationStatus.setText("Pobieranie lokalizacji GPS...");
+
+        fusedLocationClient.getCurrentLocation(Priority.PRIORITY_HIGH_ACCURACY, null)
                 .addOnSuccessListener(location -> {
                     if (location == null) {
-                        Toast.makeText(
-                                this,
-                                "Nie udało się pobrać lokalizacji",
-                                Toast.LENGTH_SHORT
-                        ).show();
+                        fusedLocationClient.getLastLocation().addOnSuccessListener(lastLoc -> {
+                            if (lastLoc != null) {
+                                processLocation(lastLoc);
+                            } else {
+                                tvLocationStatus.setText("Nie udało się pobrać lokalizacji. Upewnij się, że GPS jest włączony.");
+                                Toast.makeText(this, "Błąd lokalizacji GPS", Toast.LENGTH_SHORT).show();
+                            }
+                        });
                         return;
                     }
-
-                    double latitude = location.getLatitude();
-                    double longitude = location.getLongitude();
-
-                    etLatitude.setText(String.valueOf(latitude));
-                    etLongitude.setText(String.valueOf(longitude));
-
-                    tvLocationStatus.setText(
-                            "Lokalizacja GPS: "
-                                    + latitude
-                                    + ", "
-                                    + longitude
-                    );
+                    processLocation(location);
+                })
+                .addOnFailureListener(e -> {
+                    tvLocationStatus.setText("Błąd GPS: " + e.getMessage());
                 });
+    }
+
+    private void processLocation(android.location.Location location) {
+        double latitude = location.getLatitude();
+        double longitude = location.getLongitude();
+
+        etLatitude.setText(String.valueOf(latitude));
+        etLongitude.setText(String.valueOf(longitude));
+
+        tvLocationStatus.setText(
+                String.format(Locale.getDefault(), "GPS: %.6f, %.6f", latitude, longitude)
+        );
+
+        getCityFromCoordinates(latitude, longitude);
+    }
+
+    private void getCityFromCoordinates(double latitude, double longitude) {
+        if (!Geocoder.isPresent()) {
+            return;
+        }
+
+        geocoderExecutor.execute(() -> {
+            Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+            try {
+                List<Address> addresses = geocoder.getFromLocation(latitude, longitude, 1);
+                runOnUiThread(() -> {
+                    if (addresses != null && !addresses.isEmpty()) {
+                        Address address = addresses.get(0);
+                        String city = address.getLocality();
+                        if (city == null || city.trim().isEmpty()) {
+                            city = address.getSubAdminArea();
+                        }
+                        if (city == null || city.trim().isEmpty()) {
+                            city = address.getAdminArea();
+                        }
+                        if (city != null && !city.trim().isEmpty()) {
+                            etLocationName.setText(city.trim());
+                            tvLocationStatus.setText("Lokalizacja: " + city.trim());
+                        }
+                    }
+                });
+            } catch (IOException ignored) {
+            }
+        });
     }
 
     @Override
@@ -232,5 +284,11 @@ public class ManualEntryActivity extends AppCompatActivity {
                 ).show();
             }
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        geocoderExecutor.shutdown();
     }
 }

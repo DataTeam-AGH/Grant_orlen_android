@@ -11,9 +11,6 @@ public class model {
         ALERT
     }
 
-    // ==============================================================================
-    // 1. FUNKCJE PRZYNALEŻNOŚCI (FUZZY MEMBERSHIP FUNCTIONS)
-    // ==============================================================================
 
     private static double trimf(double x, double a, double b, double c) {
         if (x <= a || x >= c) return 0.0;
@@ -58,9 +55,7 @@ public class model {
         return fz;
     }
 
-    // ==============================================================================
-    // 2. SILNIK WNIOSKOWANIA (MAMDANI INFERENCE ENGINE)
-    // ==============================================================================
+
 
     private static Map<String, Double> evaluateRules(Map<String, Map<String, Double>> fz) {
         double vLow = 0.0;

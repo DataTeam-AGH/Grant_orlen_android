@@ -43,13 +43,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SafetyAlarmActivity extends Activity {
 
-    private Vibrator vibrator;
+    private EmailApiService emailApiService;
     private FusedLocationProviderClient fusedLocationClient;
     private LocationCallback locationCallback;
-    private TextView tvCurrentLocation;
-    private TextView tvWeatherAlarm;
+    private Vibrator vibrator;
     private WeatherService weatherService;
-    private EmailApiService emailApiService;
+    private TextView tvWeatherAlarm;
+    private TextView tvLocationAlarm;
+
     private boolean isEmailSent = false;
     private static final String WEATHER_API_KEY = "c6ebc42aeaf95f82074837ad9ea223e9";
 
@@ -68,14 +69,14 @@ public class SafetyAlarmActivity extends Activity {
         getWindow().setAttributes(params);
 
         setContentView(R.layout.activity_safety_alarm);
+        tvWeatherAlarm = findViewById(R.id.tvWeatherAlarm);
+        tvLocationAlarm = findViewById(R.id.tvLocationAlarm);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        tvCurrentLocation = findViewById(R.id.tvCurrentLocation);
-        tvWeatherAlarm = findViewById(R.id.tvWeatherAlarm);
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
         initWeatherService();
@@ -86,8 +87,7 @@ public class SafetyAlarmActivity extends Activity {
             public void onLocationResult(@NonNull LocationResult locationResult) {
                 for (android.location.Location location : locationResult.getLocations()) {
                     if (location != null) {
-                        updateLocationUi(location);
-                        getWeatherForLocation(location.getLatitude(), location.getLongitude());
+                        handleLocationAndWeather(location);
                     }
                 }
             }
@@ -130,7 +130,6 @@ public class SafetyAlarmActivity extends Activity {
         TextView tvAlarmDetails = findViewById(R.id.tvAlarmDetails);
 
         String gasName = getIntent().getStringExtra("gasName");
-        String stationName = getIntent().getStringExtra("stationName");
 
         double concentration = getIntent().getDoubleExtra(
                 "concentration",
@@ -141,14 +140,9 @@ public class SafetyAlarmActivity extends Activity {
             gasName = "Metan";
         }
 
-        if (stationName == null) {
-            stationName = "Kraków Północ";
-        }
-
         String details =
                 "Gaz: " + gasName +
                         "\nStężenie: " + concentration + "%" +
-                        "\nStacja: " + stationName +
                         "\nPoziom zagrożenia: WYSOKI";
 
         tvAlarmDetails.setText(details);
@@ -215,10 +209,22 @@ public class SafetyAlarmActivity extends Activity {
         }
     }
 
+    private void handleLocationAndWeather(android.location.Location location) {
+        updateLocationUi(location);
+        getWeatherForLocation(location.getLatitude(), location.getLongitude());
+    }
+
     private void updateLocationUi(android.location.Location location) {
-        String latDms = convertToDms(location.getLatitude(), true);
-        String lngDms = convertToDms(location.getLongitude(), false);
+        double latitude = location.getLatitude();
+        double longitude = location.getLongitude();
+
+        String latDms = convertToDms(latitude, true);
+        String lngDms = convertToDms(longitude, false);
         String locationString = getString(R.string.alarm_location_format, latDms, lngDms);
+        
+        if (tvLocationAlarm != null) {
+            tvLocationAlarm.setText(locationString);
+        }
         
         // Wywołujemy wysyłanie e-maila tutaj, mając dostępną lokalizację GPS
         // Dodano zabezpieczenie: wysyłamy tylko raz!
@@ -231,7 +237,8 @@ public class SafetyAlarmActivity extends Activity {
             if (gasName == null) gasName = "Metan";
             if (stationName == null) stationName = "Kraków Północ";
             
-            sendAlertEmail(gasName, stationName, concentration, locationString);
+            String decimalCoords = String.format(Locale.getDefault(), " (%.6f, %.6f)", latitude, longitude);
+            sendAlertEmail(gasName, stationName, concentration, locationString + decimalCoords);
         }
     }
 

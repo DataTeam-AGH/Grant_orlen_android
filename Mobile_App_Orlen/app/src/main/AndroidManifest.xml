@@ -36,7 +36,6 @@
 
         <activity android:name=".AddMeasurementActivity" android:label="Dodaj pomiar" />
         <activity android:name=".HistoryActivity" android:label="Historia" />
-        <activity android:name=".MapActivity" android:label="Mapa" />
         <activity android:name=".AlertsActivity" android:label="Alarmy" />
         <activity
             android:name=".SafetyAlarmActivity"

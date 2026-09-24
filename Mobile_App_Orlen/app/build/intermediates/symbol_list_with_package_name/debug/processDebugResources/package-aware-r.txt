@@ -4063,9 +4063,7 @@ id btnDateFrom
 id btnDateTo
 id btnGetLocation
 id btnHistory
-id btnMap
 id btnNewMeasurement
-id btnRefreshLocation
 id btnSave
 id btnToggleFilters
 id btn_cancel
@@ -4238,7 +4236,6 @@ id listMode
 id list_item
 id m3_side_sheet
 id main
-id map
 id marquee
 id masked
 id match_constraint
@@ -4514,15 +4511,12 @@ id tvAlarmDetails
 id tvAnomalyCount
 id tvAppName
 id tvCh4
-id tvCurrentLocation
 id tvDate
 id tvEmptyHistory
 id tvEvacuateNow
-id tvGpsStatus
 id tvLastMeasurements
-id tvLatitude
 id tvLocation
-id tvLongitude
+id tvLocationAlarm
 id tvMeasurementsCount
 id tvMethaneValue
 id tvResultsCount
@@ -4688,7 +4682,6 @@ layout activity_alerts
 layout activity_history
 layout activity_main
 layout activity_manual_entry
-layout activity_map
 layout activity_safety_alarm
 layout bonuspack_bubble
 layout custom_dialog

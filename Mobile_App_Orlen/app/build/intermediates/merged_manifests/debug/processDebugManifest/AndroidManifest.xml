@@ -76,9 +76,6 @@
             android:name="com.example.mobile_app_orlen.HistoryActivity"
             android:label="Historia" />
         <activity
-            android:name="com.example.mobile_app_orlen.MapActivity"
-            android:label="Mapa" />
-        <activity
             android:name="com.example.mobile_app_orlen.AlertsActivity"
             android:label="Alarmy" />
         <activity

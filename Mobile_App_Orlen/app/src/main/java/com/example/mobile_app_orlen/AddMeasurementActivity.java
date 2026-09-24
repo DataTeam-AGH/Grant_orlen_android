@@ -20,6 +20,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.mobile_app_orlen.data.model;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.Priority;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.io.IOException;
@@ -220,31 +221,41 @@ public class AddMeasurementActivity extends AppCompatActivity {
             return;
         }
 
-        fusedLocationClient.getLastLocation().addOnSuccessListener(location -> {
-            if (location == null) {
-                Toast.makeText(
-                        this,
-                        "Nie udało się pobrać lokalizacji",
-                        Toast.LENGTH_SHORT
-                ).show();
-                return;
-            }
+        tvLocationStatus.setText("Pobieranie lokalizacji GPS...");
 
-            double latitude = location.getLatitude();
-            double longitude = location.getLongitude();
+        fusedLocationClient.getCurrentLocation(Priority.PRIORITY_HIGH_ACCURACY, null)
+                .addOnSuccessListener(location -> {
+                    if (location == null) {
+                        // Jeśli getCurrentLocation zawiedzie, spróbujmy chociaż ostatniej znanej
+                        fusedLocationClient.getLastLocation().addOnSuccessListener(lastLoc -> {
+                            if (lastLoc != null) {
+                                processLocation(lastLoc);
+                            } else {
+                                tvLocationStatus.setText("Nie udało się pobrać lokalizacji. Upewnij się, że GPS jest włączony.");
+                                Toast.makeText(this, "Błąd lokalizacji GPS", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                        return;
+                    }
+                    processLocation(location);
+                })
+                .addOnFailureListener(e -> {
+                    tvLocationStatus.setText("Błąd GPS: " + e.getMessage());
+                });
+    }
 
-            etLatitude.setText(String.valueOf(latitude));
-            etLongitude.setText(String.valueOf(longitude));
+    private void processLocation(android.location.Location location) {
+        double latitude = location.getLatitude();
+        double longitude = location.getLongitude();
 
-            tvLocationStatus.setText(
-                    "Lokalizacja GPS: " +
-                            latitude +
-                            ", " +
-                            longitude
-            );
+        etLatitude.setText(String.valueOf(latitude));
+        etLongitude.setText(String.valueOf(longitude));
 
-            getCityFromCoordinates(latitude, longitude);
-        });
+        tvLocationStatus.setText(
+                String.format(Locale.getDefault(), "GPS: %.6f, %.6f", latitude, longitude)
+        );
+
+        getCityFromCoordinates(latitude, longitude);
     }
 
     private void getCityFromCoordinates(double latitude, double longitude) {

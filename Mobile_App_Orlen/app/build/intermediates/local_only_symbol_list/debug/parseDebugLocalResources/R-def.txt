@@ -21,9 +21,7 @@ id btnDateFrom
 id btnDateTo
 id btnGetLocation
 id btnHistory
-id btnMap
 id btnNewMeasurement
-id btnRefreshLocation
 id btnSave
 id btnToggleFilters
 id btn_cancel
@@ -38,7 +36,6 @@ id et_location_name
 id et_longitude
 id filterPanel
 id main
-id map
 id progressMethane
 id rvHistory
 id spLocation
@@ -61,15 +58,12 @@ id tvAlarmDetails
 id tvAnomalyCount
 id tvAppName
 id tvCh4
-id tvCurrentLocation
 id tvDate
 id tvEmptyHistory
 id tvEvacuateNow
-id tvGpsStatus
 id tvLastMeasurements
-id tvLatitude
 id tvLocation
-id tvLongitude
+id tvLocationAlarm
 id tvMeasurementsCount
 id tvMethaneValue
 id tvResultsCount
@@ -88,7 +82,6 @@ layout activity_alerts
 layout activity_history
 layout activity_main
 layout activity_manual_entry
-layout activity_map
 layout activity_safety_alarm
 layout item_measurement
 mipmap ic_launcher

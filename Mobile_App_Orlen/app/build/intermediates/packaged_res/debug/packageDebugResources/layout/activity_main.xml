@@ -222,17 +222,6 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
             app:cornerRadius="16dp" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnMap"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="12dp"
-            android:text="Mapa GPS i heatmapa"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            app:backgroundTint="#D32F2F"
-            app:cornerRadius="16dp" />
-
-        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnAlerts"
             android:layout_width="match_parent"
             android:layout_height="60dp"
